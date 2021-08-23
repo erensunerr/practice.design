@@ -1,0 +1,488 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button Default 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid #101010;
+  border-radius: .5rem;
+  width: 100%;
+}
+
+.c0 p {
+  text-align: center;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.c1 {
+  cursor: pointer;
+}
+
+<button
+  className="c0 c1"
+>
+  <p>
+    I'm a button.
+  </p>
+</button>
+`;
+
+exports[`Storyshots Button Disabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid #101010;
+  border-radius: .5rem;
+  width: 100%;
+}
+
+.c0 p {
+  text-align: center;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.c1 {
+  color: #888888;
+  border-color: #888888;
+  cursor: not-allowed;
+}
+
+.c1 img {
+  opacity: 0.5;
+}
+
+<button
+  className="c0 c1"
+>
+  <p>
+    I'm a button.
+  </p>
+</button>
+`;
+
+exports[`Storyshots Button With Image 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid #101010;
+  border-radius: .5rem;
+  width: 100%;
+}
+
+.c0 p {
+  text-align: center;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.c1 {
+  cursor: pointer;
+}
+
+<button
+  className="c0 c1"
+>
+  <img
+    alt="google logo"
+    src="google_logo.svg"
+  />
+   
+  <p>
+    I'm a button.
+  </p>
+   
+  <img
+    alt="google logo"
+    src="google_logo.svg"
+  />
+</button>
+`;
+
+exports[`Storyshots Button With Image Disabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid #101010;
+  border-radius: .5rem;
+  width: 100%;
+}
+
+.c0 p {
+  text-align: center;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.c1 {
+  color: #888888;
+  border-color: #888888;
+  cursor: not-allowed;
+}
+
+.c1 img {
+  opacity: 0.5;
+}
+
+<button
+  className="c0 c1"
+>
+  <img
+    alt="google logo"
+    src="google_logo.svg"
+  />
+   
+  <p>
+    I'm a button.
+  </p>
+   
+  <img
+    alt="google logo"
+    src="google_logo.svg"
+  />
+</button>
+`;
+
+exports[`Storyshots ChallengeCard Default 1`] = `
+.c0 {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  max-width: 20rem;
+  border-radius: .5rem .5rem 0 0;
+  overflow: hidden;
+  gap: 1rem;
+  -webkit-filter: drop-shadow(2px 4px 8px rgba(16,16,16,0.05));
+  filter: drop-shadow(2px 4px 8px rgba(16,16,16,0.05));
+}
+
+.c0 img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.c0 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c0 a {
+  color: #101010;
+}
+
+.c1 {
+  background-color: #101010;
+  color: #F0F0F0;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="figma thumbnail"
+  />
+  <div>
+    <a
+      className="c1"
+    >
+      User Personas
+    </a>
+    <a
+      className="c1"
+    >
+      Stories
+    </a>
+    <a
+      className="c1"
+    >
+      Wireframe
+    </a>
+    <p>
+      challenge by 
+      <a
+        className="small-text"
+      >
+        @gerroo
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Footer Default 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 1rem;
+  padding: 5rem 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #101010;
+  color: #F0F0F0;
+}
+
+.c0 a {
+  color: #F0F0F0;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  -webkit-transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+}
+
+.c0 a:hover,
+.c0 a:active {
+  display: inline-block;
+  color: red;
+}
+
+<section
+  className="c0"
+>
+  <p>
+    practice.design
+  </p>
+  <p>
+    made with ❤️ by 
+    <a
+      href="http://github.com/gerroo"
+    >
+      @gerroo
+    </a>
+  </p>
+</section>
+`;
+
+exports[`Storyshots Navbar Default 1`] = `
+.c1 {
+  padding: .5rem;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2.5rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+<section
+  className="c0"
+>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    practice.design
+  </button>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    <img
+      alt="hamburger menu icon"
+      src="hamburger_menu_icon.svg"
+    />
+  </button>
+</section>
+`;
+
+exports[`Storyshots Navbar Option Default 1`] = `
+.c0 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  padding: .75rem;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+<button
+  className="c0"
+>
+  home
+</button>
+`;
+
+exports[`Storyshots Navbar Overlay Default 1`] = `
+.c1 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  padding: .75rem;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c0 {
+  position: absolute;
+  padding: 2.5rem .5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: .5rem;
+  top: 4rem;
+}
+
+<nav
+  className="c0"
+>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    hello
+  </button>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    second option
+  </button>
+</nav>
+`;
+
+exports[`Storyshots SolutionCard Alternate 1`] = `
+<div
+  className=""
+>
+  <img
+    alt="figma thumbnail"
+  />
+  <div>
+    <p />
+    <p>
+      solution by 
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SolutionCard Default 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Storyshots SolutionCard Some State 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Storyshots SolutionCard With Button 1`] = `
+<div
+  className=""
+>
+  <img
+    alt="figma thumbnail"
+  />
+  <div>
+    <p />
+    <p>
+      solution by 
+    </p>
+  </div>
+</div>
+`;
