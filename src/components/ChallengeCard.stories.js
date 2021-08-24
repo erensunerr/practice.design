@@ -3,7 +3,7 @@ import ChallengeCard from './ChallengeCard'
 
 export default {
     component: ChallengeCard,
-    title: 'ChallengeCard'
+    title: 'Cards / ChallengeCard'
 }
 
 const Template = args => <ChallengeCard {...args} />;
@@ -24,8 +24,8 @@ Default.args = {
     }
 }
 
-export const SomeState = Template.bind({});
-SomeState.args = {
+// export const SomeState = Template.bind({});
+// SomeState.args = {
     
-}
+// }
 

@@ -3,7 +3,7 @@ import SolutionCard from './SolutionCard'
 
 export default {
     component: SolutionCard,
-    title: 'SolutionCard'
+    title: 'Cards / SolutionCard'
 }
 
 const Template = args => <SolutionCard {...args} />;

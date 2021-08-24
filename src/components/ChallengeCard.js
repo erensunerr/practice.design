@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import propTypes from 'prop-types';
 import { defaultTheme } from './styles'
 
+
+// todo: turn challenge and solution cards into special varitons
+// of a card component.
 const ChallengeStyles = styled.div`
 
     margin: 0 auto;
@@ -24,7 +27,12 @@ const ChallengeStyles = styled.div`
         justify-content: space-between;
     }
 
-    a {
+    & > div > p {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    p > a {
         color: ${defaultTheme.colors.dark};
     }
 `;
@@ -34,29 +42,51 @@ const CategoryStyles = styled.a`
     background-color: ${defaultTheme.colors.dark};
     color: ${defaultTheme.colors.light};
     border-radius: 1rem;
-
+    padding: .5em 1.5em;
+    text-decoration: none;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    cursor: default;
 `
 
 const CategoriesDiv = styled.div`
-
+    display: flex;
+    gap: .5em;
+    align-items: stretch;
+    margin-right: 1.5em;
+    overflow: scroll;
+    * {
+        white-space: nowrap;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `
 
 /**
- * 
+ * card for a challenge
  */
 function ChallengeCard(props) {
+    console.table(props.categories);
     return (
             <ChallengeStyles {...props.toCard}>
                 <img alt="figma thumbnail" {...props.img} />
                 <div>
-                    <
-                    {
-                        props.categories.map(
-                            (category, i) => <CategoryStyles className="small-text" key={i}>{category.name}</CategoryStyles>
-                        )
-                        
-                    }
-                    <p>challenge by <a href={props.by.href}>{props.by.text}</a></p>
+                    <CategoriesDiv>
+                        {
+                            props.categories.map(
+                                (category, i) => 
+                                    <CategoryStyles 
+                                        // href={category.href} 
+                                        className="small-text" 
+                                        key={i}>
+                                        {category.name}
+                                    </CategoryStyles>
+                            )
+                        }
+                    </CategoriesDiv>
+                    <p>by <a href={props.by.href}>{props.by.text}</a></p>
                 </div>
 
             </ChallengeStyles>

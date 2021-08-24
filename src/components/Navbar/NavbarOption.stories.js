@@ -3,7 +3,7 @@ import NavbarOption from './NavbarOption';
 
 export default {
     component: NavbarOption,
-    title: "Navbar Option",
+    title: "Navbar/Navbar Option",
 }
 
 const Template = args => <NavbarOption {...args} />

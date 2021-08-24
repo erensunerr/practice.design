@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import propTypes from 'prop-types';
 import {defaultTheme} from '../styles'
 
+
+// todo: rename this into an option component, a similar thing is being used in login form
+// and cards
 const NavbarOptionStyles = styled.button`
 
     color: ${defaultTheme.dark};

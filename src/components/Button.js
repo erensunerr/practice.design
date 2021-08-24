@@ -3,11 +3,13 @@ import styled from 'styled-components'
 import propTypes from 'prop-types'
 import {defaultTheme} from './styles.js';
 
+// todo: add a label sort of thing underneath ex. in about section
 
 const ButtonStyles = styled.button`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: transparent;
 
     padding: 1rem 1.5rem;
     border: 1px solid ${defaultTheme.colors.dark};
@@ -18,6 +20,11 @@ const ButtonStyles = styled.button`
         text-align: center;
         flex: 1 0;
         order: 0;
+    }
+
+    &:focus-visible {
+        border-width: 2px;
+        outline: none;
     }
 `;
 

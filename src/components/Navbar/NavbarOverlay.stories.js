@@ -4,7 +4,7 @@ import NavbarOverlay from './NavbarOverlay';
 
 export default {
     component: NavbarOverlay,
-    title: "Navbar Overlay"
+    title: "Navbar / Navbar Overlay"
 };
 
 const Template = args => <NavbarOverlay {...args} />
