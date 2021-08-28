@@ -1,162 +1,127 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
-import { defaultTheme } from './styles'
-import Button from './Button'
-import google_logo from '../static/google_logo.svg';
+import Button from './Button';
+import googleLogo from '../static/google_logo.svg';
+import {Title} from './Typography';
+import Option from './Option';
+import ImageButton from './ImageButton';
+import TextButton from './TextButton';
+import TextInput from './TextInput';
+import useOptionReveal from './useOptionReveal';
+import {setField} from './utils';
+import doLogin from '../api/doLogin';
+import doGoogleLogin from '../api/doGoogleLogin';
+import doResetPassword from '../api/doResetPassword';
 
-
-// todo remove some complexity from this component into others
 
 const LoginFormStyles = styled.div`
     display: flex;
     flex-flow: column;
     gap: 2rem;
-`
+`;
 
 const InputsStyles = styled.div`
     display: flex;
     flex-flow: column;
-    gap: 1rem;
-    
-`
+    gap: .5rem;
+`;
 
 const Options = styled.div`
     display: flex;
     justify-content: space-between;
-    button {
-        border: none;
-        padding: .5rem;
-        background: transparent;
-        cursor: pointer;
-        &:focus-visible {
-            outline: none;
-            font-weight: bold;
-        }
-    }
-`
-
-const InputStyles = styled.input`
-
-    border-radius: 0;
-    padding: .5rem;
-    border: 1px solid ${ defaultTheme.colors.dark };
-
-    &:focus-visible {
-        border-width: 2px;
-        outline: none;
-    }
-`
-
-const ErrorStyles = styled.p`
-
-`
-
-const ErrorDict = {
-    'errorname': [ "possible message 1", "possible message 2" ],
-}
+`;
 
 /**
- * 
+ * Let them log in or eat bread?
+ * - Nah log in.
  */
 function LoginForm(props) {
+  // regular form stuff
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
+  const [emailError, setEmailError] = useState(null);
+  const [passError, setPassError] = useState(null);
+  const [loginButtonError, setLoginButtonError] = useState(null);
+  const [googleLoginButtonError, setGoogleLoginButtonError] = useState(null);
 
-    // forgot password stuff
-    const [ forgotPassword, setForgotPassword ] = useState(false);
-    const toggleForgotPassword = () => setForgotPassword(p => !p);
-    const [ forgotPasswordEmail, setForgotPasswordEmail ] = useState(false);
-    const [ forgotPasswordError, setForgotPasswordError ] = useState(null);
-
-
-    // regular form stuff
-    const [ email, setEmail ] = useState("");
-    const [ password, setPassword ] = useState("");
-    const [ error, setError ] = useState(null);
-
-
-    // do firebase stuff
-    function doLogin() {
-        console.log("DO LOGIN WITH: ", email, password);
-    }
-    function doResetPassword() {
-        console.log("DO RESET PASSWORD WITH: ", forgotPasswordEmail);
-    }
-    function doGoogleLogin() {
-        console.log("DO GOOGLE LOGIN");
-    }
+  // forgot password stuff
+  const [forgotPasswordEmail, setForgotPasswordEmail] = useState('');
+  const [forgotPasswordError, setForgotPasswordError] = useState('');
 
 
+  // error setter object passed to firebase.
+  const errorSetters = {
+    'email': setEmailError,
+    'pass': setPassError,
+    'login': setLoginButtonError,
+    'googleLogin': setGoogleLoginButtonError,
+    'forgotPassword': setForgotPasswordError,
+  };
 
+  const [forgotPasswordOption, forgotPasswordSection] = useOptionReveal(
+      'forgot password',
+      <>
+        <TextInput
+          value={forgotPasswordEmail}
+          onChange={setField(setForgotPasswordEmail)}
+          label='email'
+          error={forgotPasswordError}
+        />
+        <TextButton
+          text="reset password"
+          onClick={() => doResetPassword(forgotPasswordEmail, errorSetters)}
+        />
+      </>,
+  );
+  return (
+    <LoginFormStyles>
+      <Title>login</Title>
+      <InputsStyles>
+        <TextInput
+          label='email'
+          onChange={setField(setEmail)}
+          value={email}
+          error={emailError}
+        />
+        <TextInput
+          label='password'
+          type='password'
+          onChange={setField(setPass)}
+          value={pass}
+          error={passError}
+        />
+      </InputsStyles>
+      <TextButton
+        text="login"
+        onClick={() => doLogin(email, pass, errorSetters)}
+        error={loginButtonError}
+      />
 
+      <ImageButton
+        text="login with google"
+        img={{src: googleLogo}}
+        onClick={() => doGoogleLogin(errorSetters)}
+        error={googleLoginButtonError}
+      />
 
-    function setField(setter) {
-        return function (e) {
-            setter(e.target.value)
+      <Options>
+        <Option text='sign up instead' />
+        {
+          forgotPasswordOption
         }
-    }
+      </Options>
 
-    return (
-        <LoginFormStyles>
-            <h1>login</h1>
+      {
+        forgotPasswordSection
+      }
 
-            <InputsStyles>
-                <InputStyles 
-                    onChange={ setField(setEmail) } 
-                    value={ email }
-                    placeholder="email" />
-                <InputStyles 
-                    onChange={ setField(setPassword) }
-                    value={ password }
-                    type="password"
-                    placeholder="password" />
-
-                {   
-                    error &&
-                    <ErrorStyles className="small-text">
-                        { ErrorDict[error] }
-                    </ErrorStyles>
-                }
-            </InputsStyles>
-
-            <Button 
-                text="login" 
-                onClick={() => doLogin()} />
-
-            <Button 
-                text="login with google"
-                img={{src: google_logo}}
-                onClick={ () => doGoogleLogin() } />
-
-
-            <Options>
-                <button className="underline">sign up instead</button>
-                <button 
-                    className="underline" 
-                    onClick={ toggleForgotPassword }>
-                    forgot password
-                </button>
-            </Options>
-
-            {   forgotPassword &&
-                <>
-                    <InputStyles placeholder="email" onChange={ setField(setForgotPasswordEmail) }/>
-                    {   
-                        forgotPasswordError &&
-                        <ErrorStyles className="small-text">
-                            {ErrorDict[error] }
-                        </ErrorStyles>
-                    }
-                    <Button text="reset password" onClick={ () => doResetPassword(forgotPasswordEmail) } />
-                </>
-            }
-            
-        </LoginFormStyles>
-    )
+    </LoginFormStyles>
+  );
 }
 
-// todo: write propTypes for LoginForm
 LoginForm.propTypes = {
 
-}
+};
 
-export default LoginForm
+export default LoginForm;

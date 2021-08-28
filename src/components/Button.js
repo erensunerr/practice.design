@@ -1,105 +1,96 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import propTypes from 'prop-types'
-import {defaultTheme} from './styles.js';
+import React, {useState} from 'react';
+import styled from 'styled-components';
+import propTypes from 'prop-types';
+import {BodyText, SmallText} from './Typography';
 
-// todo: add a label sort of thing underneath ex. in about section
+// TODO: come up with a way to style hover without making mobile bad
+//        Option also needs this (maybe common component)
+//        -> theme var for touchscreen
 
 const ButtonStyles = styled.button`
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: transparent;
+    justify-content: ${
+
+  // spacing based on children length
+  (props) => props.children.length > 1 ?
+    'space-between' :
+    'space-around'
+};
 
     padding: 1rem 1.5rem;
-    border: 1px solid ${defaultTheme.colors.dark};
+    border: 1px solid ${(props) => props.theme.colors.dark};
     border-radius: .5rem;
     width: 100%;
-
-    p {
-        text-align: center;
-        flex: 1 0;
-        order: 0;
-    }
-
     &:focus-visible {
-        border-width: 2px;
         outline: none;
     }
 `;
 
-
-
 const DisabledButtonStyles = styled(ButtonStyles)`
-    color: ${defaultTheme.colors.passive};
-    border-color: ${defaultTheme.colors.passive};
     cursor: not-allowed;
-
-    & img {
-        opacity: 0.5;
-    }
+    opacity: 0.5;
 `;
 
 const EnabledButtonStyles = styled(ButtonStyles)`
     cursor: pointer;
-`
+    &:focus-visible {
+        border-width: 2px;
+    }
+`;
+
+const ButtonDiv = styled.div`
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+`;
+
 /**
  * this is a simple responsive button component
+ * handles the disabled logic
  */
-function Button({ disabled, onClick, text, img}) {
-    let Inner = (
-        <>
-            <p>{text}</p>
-        </>
-    );
+function Button({disabled, onClick, children, error}) {
+  return (
+    <ButtonDiv>
+      {
+      disabled ?
+      <DisabledButtonStyles>
+        {children}
+      </DisabledButtonStyles> :
 
-    if (img) {
-        const Img = img.src && <img src={img.src} alt={img.alt || ""}/>;
-        Inner = (
-            <>
-                {Img} <p>{text}</p> {Img}
-            </>
-        );
-
-    }
-
-    return (
-        disabled ?
-            <DisabledButtonStyles>
-                {Inner}
-            </DisabledButtonStyles>
-        :
-            <EnabledButtonStyles onClick={onClick}>
-                {Inner}
-            </EnabledButtonStyles>
-            
-    )
+      <EnabledButtonStyles onClick={onClick}>
+        {children}
+      </EnabledButtonStyles>
+      }
+      {
+        error &&
+          <SmallText>{error}</SmallText>
+      }
+    </ButtonDiv>
+  );
 }
-
 
 
 Button.propTypes = {
-    /**
-     * use disabled to disable the button
-     */
-    disabled: propTypes.bool,
-    /**
+  disabled: propTypes.bool,
+  /**
      * callback function to call on click event,
      * the event object is passed too :)
      */
-    onClick: propTypes.func,
-    /**
-     * optional image to display on both sides 
-     * of the text
-     */
-    img: propTypes.shape({
-        src: propTypes.string,
-        alt: propTypes.string
-    }),
-    /**
-     * text to display inside the button
-     */
-    text: propTypes.string,
-}
+  onClick: propTypes.func.isRequired,
+  /**
+   * accepts children
+   */
+  children: propTypes.array.isRequired,
+  /**
+   * can also be used as additional info
+   */
+  error: propTypes.string,
+};
 
-export default Button
+Button.defaultProps = {
+  disabled: false,
+};
+
+export default Button;

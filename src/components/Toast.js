@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
-import { defaultTheme } from './styles';
+import {defaultTheme} from './styles';
+import {BodyText} from './Typography';
 
-
-
-const VISIBLE_DURATION = 3; // seconds
-
-const ToastStyles = styled.div`
+const ToastStyles = styled(BodyText)`
     position: absolute;
     bottom: 1rem;
     left: 50vw;
@@ -17,61 +14,78 @@ const ToastStyles = styled.div`
     color: ${ defaultTheme.colors.light };
     border-radius: 2rem;
     transition: transform .3s;
-`
-
+`;
 
 
 /**
  * generic toast message displayed mid bottom.
- * all other props passed to the div
+ * all other props passed to the html element
  */
 function Toast(props) {
+  // remove callback
+  const {
+    onRemove,
+    text,
+    visibleDuration,
+    ...otherProps} = props;
 
-    // remove callback
-    const { removeMe, text, visibleDuration=VISIBLE_DURATION, ...otherProps }  = props;
-    const [ gone, setGone ] = useState( false );
-    const removeToast = () => {
-        console.log("[+] toast removed")
-        try {
-            removeMe();
-        } catch {}
-        setGone( true );
-    }
+  const [gone, setGone] = useState(false);
+  const [timerId, setTimerId] = useState();
 
-
-    // animation effect
-    useEffect( 
-        () => {
-            console.log("called effect");
-            setTimeout(
-                removeToast,
-                (visibleDuration)*1000
-            )
-        },
-        []
-    );
+  const removeToast = () => {
+    try {
+      onRemove(otherProps?.id);
+    } catch {}
+    setGone(true);
+  };
 
 
-    return (
-        gone ? null 
-        : <ToastStyles onClick={removeToast} {...otherProps} >
-            {text}
+  // remove toast in visibleDuration seconds
+  useEffect(
+      () => {
+        const timeoutID = setTimeout(
+            removeToast,
+            (visibleDuration)*1000,
+        );
+        setTimerId(timeoutID);
+      },
+      [],
+  );
+
+  // if toast is already removed, remove the timer
+  useEffect(
+      () => {
+        gone && clearTimeout(timerId);
+      },
+      [gone],
+  );
+
+
+  return (
+        gone ? null :
+        <ToastStyles onClick={removeToast} {...otherProps} >
+          {text}
         </ToastStyles>
-    );
+  );
 }
 
-// todo: write propTypes for Toast
 Toast.propTypes = {
-    text: propTypes.string.isRequired,
-    /**
+  text: propTypes.string.isRequired,
+  /**
      * callback function
-     * that removes toast
+     * called on remove
+     * if you passed an id prop it will be returned as an argument
      */
-    removeMe: propTypes.func,
-    /**
+  onRemove: propTypes.func,
+  /**
      * duration in seconds
      */
-    visibleDuration: propTypes.number
-}
+  visibleDuration: propTypes.number,
+};
 
-export default Toast
+Toast.defaultProps = {
+  visibleDuration: 3,
+};
+
+
+export default Toast;

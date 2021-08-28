@@ -1,20 +1,16 @@
 import React from 'react';
-import ChallengeCard from './ChallengeCard';
+import CategoriesSelector from './CategoriesSelector';
 import MobileContainer from './MobileContainer';
 
 export default {
-  component: ChallengeCard,
-  title: 'Molecules / Cards / Challenge Card',
+  component: CategoriesSelector,
+  title: 'Molecules / Categories Selector',
 };
 
-const Template = (args) => <ChallengeCard {...args} />;
+const Template = (args) => <CategoriesSelector {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  title: 'Spotify Personas Exercise',
-  by: {
-    text: 'by @john123',
-  },
   categories: [
     {text: 'wireframing'},
     {text: 'user personas'},
@@ -25,10 +21,10 @@ Default.args = {
   ],
 };
 
-export const Mobile = (args) => (
-  <MobileContainer><ChallengeCard {...args} /></MobileContainer>
-);
 
+export const Mobile = (args) => (
+  <MobileContainer><CategoriesSelector {...args} /></MobileContainer>
+);
 Mobile.args = {
   ...Default.args,
 };

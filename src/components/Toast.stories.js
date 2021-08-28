@@ -1,22 +1,19 @@
 import React from 'react';
-import Toast from './Toast'
+import Toast from './Toast';
 
 export default {
-    component: Toast,
-    title: 'Toast'
-}
+  component: Toast,
+  title: 'Molecules / Toast',
+};
 
-const Template = args => <Toast {...args} />;
+const Template = (args) => <Toast {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    text: "🎉 Starting is 50% of the work!",
-}
-
-export const Display = Template.bind({});
-Display.args = {
-    ...Default.args,
-    removeMe: () => {},
-    visibleDuration: 99999
-}
-
+  text: '🎉 Starting is 50% of the work!',
+  onRemove: (id) => {
+    console.log(`Toast ${id} removed.`);
+  },
+  visibleDuration: 3,
+  id: 5,
+};

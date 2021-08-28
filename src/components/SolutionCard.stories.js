@@ -1,29 +1,25 @@
 import React from 'react';
-import SolutionCard from './SolutionCard'
+import SolutionCard from './SolutionCard';
+import MobileContainer from './MobileContainer';
 
 export default {
-    component: SolutionCard,
-    title: 'Cards / SolutionCard'
-}
+  component: SolutionCard,
+  title: 'Molecules / Cards / Solution Card',
+};
 
-const Template = args => <SolutionCard {...args} />;
+const Template = (args) => <SolutionCard {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    img: {
-        src: "http://picsum.photos/400"
-    },
-    by: {
-        text: "@gerroo",
-        href: "www.google.com"
-    },
+  title: 'Spotify Personas',
+  by: {
+    text: 'solved by @johntravolta',
+  },
+};
 
-}
-
-export const Alternate = Template.bind({});
-Alternate.args = {
-    ...Default.args,
-    button: true,
-    challengeTitle: "spotify personas"
-}
-
+export const Mobile = (args) => (
+  <MobileContainer><SolutionCard {...args} /></MobileContainer>
+);
+Mobile.args = {
+  ...Default.args,
+};

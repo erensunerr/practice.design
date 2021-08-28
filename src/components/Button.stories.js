@@ -1,39 +1,38 @@
-import React from 'react'
-import Button from './Button'
-import google_logo from '../static/google_logo.svg';
+import React from 'react';
+import Button from './Button';
+import {BodyText} from './Typography';
+import MobileContainer from './MobileContainer';
 
 export default {
-    component: Button,
-    title: 'Button',
-}
+  component: Button,
+  title: 'Atoms / Buttons / Button',
+};
 
-const Template = args => <Button {...args} />
+const Template = (args) => (
+  <MobileContainer>
+    <Button {...args} />
+  </MobileContainer>
+);
 
 export const Default = Template.bind({});
 Default.args = {
-    text: "I'm a button.",
-    disabled: false,
-}
+  children: [
+    <BodyText key={0}>A textual child</BodyText>,
+  ],
+  onClick: () => {
+    console.log('Button clicked.');
+  },
+};
 
 
-export const Disabled = Template.bind({})
+export const Disabled = Template.bind({});
 Disabled.args = {
-    ...Default.args,
-    disabled: true,
-}
+  ...Default.args,
+  disabled: true,
+};
 
-
-export const withImage = Template.bind({})
-withImage.args = {
-    ...Default.args,
-    img: {
-        src: google_logo,
-        alt: "google logo"
-    }
-}
-
-export const withImageDisabled = Template.bind({});
-withImageDisabled.args = {
-    ...withImage.args,
-    disabled: true,
-}
+export const WithError = Template.bind({});
+WithError.args = {
+  ...Default.args,
+  error: 'problems problems...',
+};

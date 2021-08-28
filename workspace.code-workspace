@@ -4,5 +4,12 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"eslint.format.enable": true,
+		"eslint.run": "onSave",
+		"todoHighlighter.stylingColor": "#f0f0f0",
+		"todoHighlighter.stylingBorderRadius": "0",
+		"todoHighlighter.textColor": "#101010",
+		"editor.tabSize": 2
+	}
 }

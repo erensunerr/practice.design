@@ -2,10 +2,10 @@ import React from 'react';
 import Footer from './Footer';
 
 export default {
-    component: Footer,
-    title: "Footer"
-}
+  component: Footer,
+  title: 'Organisms / Footer',
+};
 
-const Template = args => <Footer {...args} />
+const Template = (args) => <Footer {...args} />;
 
 export const Default = Template.bind({});
