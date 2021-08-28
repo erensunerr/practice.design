@@ -6,17 +6,37 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="challenge based ui ux design training for free"
+      content="free challenge based ui ux design training"
     />
+    <style>
+      .__no-script {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .__cat {
+        object-fit: cover;
+        width: 50vw;
+        height: 80vh;
+      }
+    </style>
 
     <!-- favicon -->
     <link rel=”shortcut icon” href=”%PUBLIC_URL%/favicon.ico”>
 
-
     <title>practice.design</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <section class="__no-script">
+        <img src='https://cataas.com/cat/says/I%20need%20javascript' class="__cat"/>
+      </section>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>
