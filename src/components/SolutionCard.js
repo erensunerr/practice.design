@@ -8,8 +8,7 @@ import Option from './Option';
 import TextButton from './TextButton';
 
 
-// TODO: process username to
-// 'solved by @username' in this component
+// TODO: process username to 'solved by @username' in this component
 
 /**
  * Specialized card for solution.

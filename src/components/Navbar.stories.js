@@ -12,11 +12,6 @@ const Template = (args) => <Navbar {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  options: [
-    {text: 'First Option'},
-    {text: 'Second Option'},
-    {text: 'Third Option'},
-  ],
 };
 
 export const Mobile = (args) =>

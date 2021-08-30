@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 import Button from './Button';
@@ -13,7 +13,7 @@ import {setField} from './utils';
 import doLogin from '../api/doLogin';
 import doGoogleLogin from '../api/doGoogleLogin';
 import doResetPassword from '../api/doResetPassword';
-
+import {UserContext} from './UserContext';
 
 const LoginFormStyles = styled.div`
     display: flex;
@@ -37,6 +37,11 @@ const Options = styled.div`
  * - Nah log in.
  */
 function LoginForm(props) {
+  const user = useContext(UserContext);
+  if (user) {
+    // TODO: return with redirect to my challenges
+  }
+
   // regular form stuff
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');

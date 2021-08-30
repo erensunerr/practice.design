@@ -39,6 +39,10 @@ export const SmallText = styled.p`
   line-height: 12px;
 `;
 
+export const Bold = styled.span`
+  font-weight: 800;
+`;
+
 /**
  * a demo component for typographic styles,
  * only used in the associated story

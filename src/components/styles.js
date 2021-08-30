@@ -10,15 +10,7 @@ export const defaultTheme = {
     light: '#F0F0F0',
   },
   fontFamily: `
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
     Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
     sans-serif
   `,
 };

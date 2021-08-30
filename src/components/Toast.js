@@ -5,8 +5,8 @@ import {defaultTheme} from './styles';
 import {BodyText} from './Typography';
 
 const ToastStyles = styled(BodyText)`
-    position: absolute;
-    bottom: 1rem;
+    position: fixed;
+    bottom: 4rem;
     left: 50vw;
     transform: translateX(-50%);
     padding: .5rem 1rem;

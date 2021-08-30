@@ -7,8 +7,7 @@ const InputStyles = styled.input`
     padding: .5rem;
     border: 1px solid ${(props) => props.theme.colors.dark };
     &:focus-visible {
-        border-width: 2px;
-        outline: none;
+        outline: 1px solid ${(props) => props.theme.colors.dark};
     }
 `;
 

@@ -36,7 +36,7 @@ const DisabledButtonStyles = styled(ButtonStyles)`
 const EnabledButtonStyles = styled(ButtonStyles)`
     cursor: pointer;
     &:focus-visible {
-        border-width: 2px;
+      box-shadow: 0px 0px 0px 1px ${(props) => props.theme.colors.dark};
     }
 `;
 
