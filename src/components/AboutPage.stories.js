@@ -4,7 +4,7 @@ import MobileContainer from './MobileContainer';
 
 export default {
   component: AboutPage,
-  title: 'AboutPage',
+  title: 'Pages / About',
 };
 
 const Template = (args) => <AboutPage {...args} />;

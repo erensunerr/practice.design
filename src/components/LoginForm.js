@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 import Button from './Button';
@@ -13,9 +13,11 @@ import {setField} from './utils';
 import doLogin from '../api/doLogin';
 import doGoogleLogin from '../api/doGoogleLogin';
 import doResetPassword from '../api/doResetPassword';
-import {UserContext} from './UserContext';
+import useAuthRedirect from './useAuthRedirect';
+import {useHistory} from 'react-router-dom';
+import Toast from './Toast';
 
-const LoginFormStyles = styled.div`
+const LoginFormStyles = styled.section`
     display: flex;
     flex-flow: column;
     gap: 2rem;
@@ -37,10 +39,8 @@ const Options = styled.div`
  * - Nah log in.
  */
 function LoginForm(props) {
-  const user = useContext(UserContext);
-  if (user) {
-    // TODO: return with redirect to my challenges
-  }
+  useAuthRedirect(false);
+  const history = useHistory();
 
   // regular form stuff
   const [email, setEmail] = useState('');
@@ -49,6 +49,7 @@ function LoginForm(props) {
   const [passError, setPassError] = useState(null);
   const [loginButtonError, setLoginButtonError] = useState(null);
   const [googleLoginButtonError, setGoogleLoginButtonError] = useState(null);
+  const [toast, setToast] = useState('');
 
   // forgot password stuff
   const [forgotPasswordEmail, setForgotPasswordEmail] = useState('');
@@ -62,6 +63,7 @@ function LoginForm(props) {
     'login': setLoginButtonError,
     'googleLogin': setGoogleLoginButtonError,
     'forgotPassword': setForgotPasswordError,
+    'toast': setToast,
   };
 
   const [forgotPasswordOption, forgotPasswordSection] = useOptionReveal(
@@ -82,6 +84,7 @@ function LoginForm(props) {
   return (
     <LoginFormStyles>
       <Title>login</Title>
+
       <InputsStyles>
         <TextInput
           label='email'
@@ -103,15 +106,18 @@ function LoginForm(props) {
         error={loginButtonError}
       />
 
+
       <ImageButton
         text="login with google"
         img={{src: googleLogo}}
         onClick={() => doGoogleLogin(errorSetters)}
         error={googleLoginButtonError}
       />
-
       <Options>
-        <Option text='sign up instead' />
+        <Option
+          text='sign up instead'
+          onClick={() => history.push('/signup')}
+        />
         {
           forgotPasswordOption
         }
@@ -119,6 +125,11 @@ function LoginForm(props) {
 
       {
         forgotPasswordSection
+      }
+
+      {
+        toast &&
+        <Toast text={toast} />
       }
 
     </LoginFormStyles>

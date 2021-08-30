@@ -4,7 +4,7 @@ import MobileContainer from './MobileContainer';
 
 export default {
   component: SignupPage,
-  title: 'SignupPage',
+  title: 'Pages / Signup',
 };
 
 const Template = (args) => <SignupPage {...args} />;

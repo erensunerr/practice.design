@@ -82,7 +82,7 @@ Button.propTypes = {
   /**
    * accepts children
    */
-  children: propTypes.array.isRequired,
+  children: propTypes.node,
   /**
    * can also be used as additional info
    */

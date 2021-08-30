@@ -5,8 +5,10 @@ import {defaultTheme} from './styles';
 import hamburgerMenu from '../static/hamburger_menu_icon.svg';
 import crossMenu from '../static/cross_menu_icon.svg';
 import Option from './Option';
-import {UserContext} from './UserContext';
 import {useHistory} from 'react-router-dom';
+import doLogOut from '../api/doLogOut';
+import {getAuth} from 'firebase/auth';
+import {UserContext} from './UserContext';
 
 // Navbar Overlay
 
@@ -115,9 +117,6 @@ const BarOptions = ({options}) => {
               <Option
                 {...option}
                 key={i}
-                onClick={
-                  () => option.onClick(history)
-                }
               />,
         )
       }
@@ -147,48 +146,6 @@ const Logo = () => {
 };
 
 
-const SignedInNavbarOptions = [
-  {
-    text: 'my challenges',
-    onClick: () => {
-      console.log('redirecting to my challenges');
-    },
-  },
-  {
-    text: 'settings',
-    onClick: () => {
-      console.log('redirecting to settings');
-    },
-  },
-  {
-    text: 'log out',
-    onClick: () => {
-      console.log('redirecting to log out');
-    },
-  },
-];
-
-const AnonymousNavbarOptions = [
-  {
-    text: 'about',
-    onClick: (history) => {
-      history.push('/about');
-    },
-  },
-  {
-    text: 'sign up',
-    onClick: (history) => {
-      history.push('/signup');
-    },
-  },
-  {
-    text: 'login',
-    onClick: (history) => {
-      history.push('/login');
-    },
-  },
-];
-
 const NavbarStyles = styled.section`
     display: flex;
     justify-content: space-between;
@@ -204,6 +161,50 @@ const NavbarStyles = styled.section`
  */
 function Navbar() {
   const user = useContext(UserContext);
+  const history = useHistory();
+
+  const SignedInNavbarOptions = [
+    {
+      text: 'my challenges',
+      onClick: () => {
+        console.log('redirecting to my challenges');
+      },
+    },
+    {
+      text: 'settings',
+      onClick: () => {
+        console.log('redirecting to settings');
+      },
+    },
+    {
+      text: 'log out',
+      onClick: () => {
+        doLogOut();
+      },
+    },
+  ];
+
+  const AnonymousNavbarOptions = [
+    {
+      text: 'about',
+      onClick: () => {
+        history.push('/about');
+      },
+    },
+    {
+      text: 'sign up',
+      onClick: () => {
+        history.push('/signup');
+      },
+    },
+    {
+      text: 'login',
+      onClick: () => {
+        history.push('/login');
+      },
+    },
+  ];
+
   let options = [];
   if (user) {
     options = SignedInNavbarOptions;

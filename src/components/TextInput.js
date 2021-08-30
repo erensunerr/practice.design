@@ -26,6 +26,7 @@ function TextInput({label, error, ...otherProps}) {
       <SmallText>{label}</SmallText>
       <InputStyles
         placeholder={label}
+        autoComplete={label}
         {...otherProps}
       />
       <SmallText>{error}</SmallText>

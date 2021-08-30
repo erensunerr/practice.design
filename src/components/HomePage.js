@@ -5,6 +5,7 @@ import {Title, Bold, BodyText} from './Typography';
 import Option from './Option';
 import Info from './Info';
 import SignupForm from './SignupForm';
+import {useHistory} from 'react-router-dom';
 
 const MetaInfoStyles = styled.div``;
 const TitleSectionStyles = styled.section`
@@ -36,25 +37,27 @@ const TitleSectionStyles = styled.section`
   }
 `;
 
-const TitleSection = () => (
-  <TitleSectionStyles>
-    <Title>practice ui & ux design</Title>
-    <MetaInfoStyles>
-      <BodyText>
-        <Bold>practice.design</Bold> is a free,
+const TitleSection = () => {
+  const history = useHistory();
+  return (
+    <TitleSectionStyles>
+      <Title>practice ui & ux design</Title>
+      <MetaInfoStyles>
+        <BodyText>
+          <Bold>practice.design</Bold> is a free,
         challenge-based training platform for ui & ux design.
-      </BodyText>
-      <Option
-        text='Read more about how I got the idea and my philosophy.'
-        onClick={
-          () => {
-            console.log('redirecting to about');
+        </BodyText>
+        <Option
+          text='Read more about how I got the idea and my philosophy.'
+          onClick={
+            () => {
+              history.push('/about');
+            }
           }
-        }
-      />
-    </MetaInfoStyles>
-  </TitleSectionStyles>
-);
+        />
+      </MetaInfoStyles>
+    </TitleSectionStyles>);
+};
 
 const FeaturesSectionStyles = styled.section`
   display: flex;

@@ -4,7 +4,7 @@ import MobileContainer from './MobileContainer';
 
 export default {
   component: LoginPage,
-  title: 'LoginPage',
+  title: 'Pages / Login',
 };
 
 const Template = (args) => <LoginPage {...args} />;

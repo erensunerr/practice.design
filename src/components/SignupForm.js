@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 import {Title, BodyText} from './Typography';
@@ -10,13 +10,16 @@ import googleLogo from '../static/google_logo.svg';
 import {setField} from './utils';
 import doCreateAccount from '../api/doCreateAccount';
 import doGoogleLogin from '../api/doGoogleLogin';
-import {UserContext} from './UserContext';
+import {useHistory} from 'react-router-dom';
+import Toast from './Toast';
 
 const SignupFormStyles = styled.section`
   display: flex;
   flex-flow: column;
   gap: 2rem;
   align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
 `;
 
 const Inputs = styled.section`
@@ -30,11 +33,6 @@ const Inputs = styled.section`
  * Used to sign up lmao
  */
 function SignupForm(props) {
-  const user = useContext(UserContext);
-  if (user) {
-    // TODO: return with redirect to my challenges
-  }
-
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
 
@@ -47,14 +45,18 @@ function SignupForm(props) {
   const [createAccountButtonError, setCreateAccountButtonError] = useState('');
   const [googleLoginError, setGoogleLoginButtonError] = useState('');
 
+  const [toast, setToast] = useState('');
+
   const errorSetters = {
     'username': setUsernameError,
     'pass': setPassError,
     'email': setEmailError,
     'googleLogin': setGoogleLoginButtonError,
     'createAccount': setCreateAccountButtonError,
+    'toast': setToast,
   };
 
+  const history = useHistory();
 
   return (
     <SignupFormStyles>
@@ -92,7 +94,14 @@ function SignupForm(props) {
         onClick={() => doGoogleLogin(errorSetters)}
         error={googleLoginError}
       />
-      <Option text='I already have an account' />
+      <Option
+        text='I already have an account'
+        onClick={() => history.push('/login')}
+      />
+      {
+        toast &&
+        <Toast text={toast} />
+      }
     </SignupFormStyles>
   );
 }

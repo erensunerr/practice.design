@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import propTypes from 'prop-types';
 import {BodyText} from './Typography';
 import SignupForm from './SignupForm';
-
+import useAuthRedirect from './useAuthRedirect';
 
 const SignupPageStyles = styled.section`
   width: 33.3333%;
@@ -18,6 +18,7 @@ const SignupPageStyles = styled.section`
  * let them register
  */
 function SignupPage(props) {
+  useAuthRedirect(false);
   return (
     <SignupPageStyles>
       <SignupForm />

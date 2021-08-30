@@ -1,10 +1,7 @@
 // Import the functions you need from the SDKs you need
 import {initializeApp} from 'firebase/app';
+import {getAuth, connectAuthEmulator} from 'firebase/auth';
 
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: 'AIzaSyDAQDzYvKlxM3zBlx5E1axksFNoYkvSTm4',
   authDomain: 'practice-design-fe4e1.firebaseapp.com',
@@ -15,5 +12,13 @@ const firebaseConfig = {
   measurementId: 'G-KLYKZSE4F1',
 };
 
-// Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+
+initializeApp(firebaseConfig);
+
+
+if (location.hostname === 'localhost') {
+  const auth = getAuth();
+  connectAuthEmulator(auth, 'http://localhost:9099');
+}
+
+

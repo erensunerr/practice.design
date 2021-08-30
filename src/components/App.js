@@ -4,12 +4,14 @@ import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import {ThemeProvider} from 'styled-components';
 
 import {defaultTheme, GlobalStyle} from './styles';
+import '../api/firebase_init';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
+import {UserContextProvider} from './UserContext';
 
 // TODO: add theme variable for touchscreen.
 
@@ -27,25 +29,27 @@ function App() {
     <>
       <Router>
         <ThemeProvider theme={defaultTheme}>
-          <GlobalStyle />
-          <Navbar />
-          <ActiveAreaStyles>
-            <Switch>
-              <Route path='/' exact>
-                <HomePage />
-              </Route>
-              <Route path='/about' exact>
-                <AboutPage />
-              </Route>
-              <Route path='/login' exact>
-                <LoginPage />
-              </Route>
-              <Route path='/signup' exact>
-                <SignupPage />
-              </Route>
-            </Switch>
-          </ActiveAreaStyles>
-          <Footer />
+          <UserContextProvider>
+            <GlobalStyle />
+            <Navbar />
+            <ActiveAreaStyles>
+              <Switch>
+                <Route path='/' exact>
+                  <HomePage />
+                </Route>
+                <Route path='/about' exact>
+                  <AboutPage />
+                </Route>
+                <Route path='/login' exact>
+                  <LoginPage />
+                </Route>
+                <Route path='/signup' exact>
+                  <SignupPage />
+                </Route>
+              </Switch>
+            </ActiveAreaStyles>
+            <Footer />
+          </UserContextProvider>
         </ThemeProvider>
       </Router>
     </>
