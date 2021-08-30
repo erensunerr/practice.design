@@ -38,7 +38,10 @@ const NavbarOverlayStyles = styled.nav`
 function NavbarOverlay({options, onClose}) {
   return (
     <NavbarOverlayStyles>
-      {options.map((option, i) => <Option key={i} {...option}/>)}
+      {options.map((option, i) =>
+        <Option key={i} {...option} onClick={
+          (e) => onClose() && option.onClick(e)
+        }/>)}
       <CrossMenu onClick={onClose}/>
     </NavbarOverlayStyles>
   );
@@ -162,6 +165,8 @@ const NavbarStyles = styled.section`
 function Navbar() {
   const user = useContext(UserContext);
   const history = useHistory();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const handleToggleExpanded = () => setIsExpanded((p) => !p);
 
   const SignedInNavbarOptions = [
     {
@@ -211,8 +216,7 @@ function Navbar() {
   } else {
     options = AnonymousNavbarOptions;
   }
-  const [isExpanded, setIsExpanded] = useState(false);
-  const handleToggleExpanded = () => setIsExpanded((p) => !p);
+
 
   // 100 is average width of one bar option.
   const isMobile = (100*options.length + 250 > document.body.clientWidth);
