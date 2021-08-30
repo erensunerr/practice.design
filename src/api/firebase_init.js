@@ -4,7 +4,7 @@ import {getAuth, connectAuthEmulator} from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDAQDzYvKlxM3zBlx5E1axksFNoYkvSTm4',
-  authDomain: 'practice-design-fe4e1.firebaseapp.com',
+  authDomain: 'practice.design',
   projectId: 'practice-design-fe4e1',
   storageBucket: 'practice-design-fe4e1.appspot.com',
   messagingSenderId: '662976049757',
