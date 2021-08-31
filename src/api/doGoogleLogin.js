@@ -5,7 +5,6 @@ import {getAuth, signInWithRedirect, GoogleAuthProvider} from 'firebase/auth';
  * @param {object} errorSetters
  */
 function doGoogleLogin(errorSetters) {
-  console.log('doing google login');
   const provider = new GoogleAuthProvider();
   const auth = getAuth();
   signInWithRedirect(auth, provider).catch(

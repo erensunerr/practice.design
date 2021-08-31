@@ -2,8 +2,8 @@
 /**
  * checks username
  */
-function doCheckUsername(username, setError) {
-  setError(false);
+function doCheckUsername(username, errorSetters) {
+  ;
 }
 
 export default doCheckUsername;

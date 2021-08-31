@@ -1,7 +1,7 @@
 import {getAuth, createUserWithEmailAndPassword}
   from 'firebase/auth';
 
-import doSetUsername from './doSetUsername';
+import doUpdateUsername from './doUpdateUsername';
 
 /**
  * create an account
@@ -17,7 +17,7 @@ function doCreateAccount(username, email, pass, errorSetters) {
   }
   createUserWithEmailAndPassword(auth, email, pass).then(
       () => {
-        doSetUsername(username);
+        doUpdateUsername(username);
       },
   )
       .catch((error) => {

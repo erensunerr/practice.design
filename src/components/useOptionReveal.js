@@ -5,7 +5,7 @@ import Option from './Option';
  * hook to optionally view some content
  * returns [option, conditionally rendered content]
  */
-function useOptionReveal(label, content, def=false) {
+function useOptionReveal(label, content, def) {
   const [reveal, setReveal] = useState(def);
   const toggleReveal = () => setReveal((p) => !p);
   return [
@@ -17,5 +17,9 @@ function useOptionReveal(label, content, def=false) {
     </>,
   ];
 }
+
+useOptionReveal.defaultProps = {
+  def: false,
+};
 
 export default useOptionReveal;

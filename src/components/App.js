@@ -5,13 +5,15 @@ import {ThemeProvider} from 'styled-components';
 
 import {defaultTheme, GlobalStyle} from './styles';
 import '../api/firebase_init';
+import {UserContextProvider} from './UserContext';
+
 import Navbar from './Navbar';
 import Footer from './Footer';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
-import {UserContextProvider} from './UserContext';
+import SettingsPage from './SettingsPage';
 
 // TODO: add theme variable for touchscreen.
 
@@ -45,6 +47,9 @@ function App() {
                 </Route>
                 <Route path='/signup' exact>
                   <SignupPage />
+                </Route>
+                <Route path='/settings' exact>
+                  <SettingsPage />
                 </Route>
               </Switch>
             </ActiveAreaStyles>

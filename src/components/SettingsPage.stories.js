@@ -4,7 +4,7 @@ import MobileContainer from './MobileContainer';
 
 export default {
   component: SettingsPage,
-  title: 'SettingsPage',
+  title: 'Pages / Settings',
 };
 
 const Template = (args) => <SettingsPage {...args} />;

@@ -163,7 +163,7 @@ const NavbarStyles = styled.section`
  * basic navbar
  */
 function Navbar() {
-  const user = useContext(UserContext);
+  const {user} = useContext(UserContext);
   const history = useHistory();
   const [isExpanded, setIsExpanded] = useState(false);
   const handleToggleExpanded = () => setIsExpanded((p) => !p);
@@ -172,13 +172,13 @@ function Navbar() {
     {
       text: 'my challenges',
       onClick: () => {
-        console.log('redirecting to my challenges');
+        history.push('/my_challenges');
       },
     },
     {
       text: 'settings',
       onClick: () => {
-        console.log('redirecting to settings');
+        history.push('/settings');
       },
     },
     {
