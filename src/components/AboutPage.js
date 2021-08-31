@@ -8,7 +8,7 @@ const ParGridStyles = styled.section`
   display: flex;
   flex-flow: wrap;
   gap: 2rem;
-  width: 33.3333%;
+  width: 50%;
   margin: 0 auto;
   @media screen and (max-width: 600px) {
     & {
