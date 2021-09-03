@@ -37,7 +37,7 @@ const Options = styled.div`
  * Let them log in or eat bread?
  * - Nah log in.
  */
-function LoginForm(props) {
+function LoginForm({}) {
   const history = useHistory();
 
   // regular form stuff

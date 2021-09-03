@@ -1,17 +1,60 @@
 import React, {useState, useContext} from 'react';
 import styled from 'styled-components';
-import propTypes from 'prop-types';
+
 import {useHistory} from 'react-router-dom';
 
 import hamburgerMenu from '../../static/hamburger_menu_icon.svg';
 import crossMenu from '../../static/cross_menu_icon.svg';
+import Icon from '../atoms/Icon';
 import Option from '../atoms/Option';
 import doLogOut from '../../api/doLogOut';
 import {UserContext} from '../UserContext';
 
-// Navbar Overlay
+// Options are spread to Option lolz
 
-const NavbarOverlayStyles = styled.nav`
+const anonymousNavbarOptions = (history) => [
+  {
+    text: 'about',
+    onClick: () => {
+      history.push('/about');
+    },
+  },
+  {
+    text: 'sign up',
+    onClick: () => {
+      history.push('/signup');
+    },
+  },
+  {
+    text: 'login',
+    onClick: () => {
+      history.push('/login');
+    },
+  },
+];
+
+const signedInNavbarOptions = (history) => [
+  {
+    text: 'my challenges',
+    onClick: () => {
+      history.push('/my_challenges');
+    },
+  },
+  {
+    text: 'settings',
+    onClick: () => {
+      history.push('/settings');
+    },
+  },
+  {
+    text: 'log out',
+    onClick: () => {
+      doLogOut();
+    },
+  },
+];
+
+const MobileOptionsStyles = styled.nav`
     position: fixed;
     top: 0;
     left: 0;
@@ -28,124 +71,12 @@ const NavbarOverlayStyles = styled.nav`
     * {
       padding: .5rem 1rem;
     }
-
 `;
 
-/**
- * overlay for the mobile version of the navbar
- */
-function NavbarOverlay({options, onClose}) {
-  return (
-    <NavbarOverlayStyles>
-      {options.map((option, i) =>
-        <Option key={i} {...option} onClick={
-          (e) => onClose() && option.onClick(e)
-        }/>)}
-      <CrossMenu onClick={onClose}/>
-    </NavbarOverlayStyles>
-  );
-}
-
-NavbarOverlay.propTypes = {
-  /**
-     * array of option objects
-     * {onClick, text}
-     */
-  options: propTypes.array.isRequired,
-  onClose: propTypes.func,
-};
-
-// hamburger menu
-
-const HamburgerMenuStyles = styled.button`
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  &:hover {
-    cursor: pointer;
-  }
-  &, img {
-    background-color: transparent;
-  }
+const DesktopOptionsStyles = styled.nav`
+display: flex;
+gap: 1rem;
 `;
-/**
- * hamburger menu button
- */
-const HamburgerMenu = ({onClick}) => (
-  // TODO: replace hamburger with cross when its open
-  <HamburgerMenuStyles
-    onClick={onClick}>
-    <img
-      src={hamburgerMenu}
-      alt="hamburger menu icon"/>
-  </HamburgerMenuStyles>
-);
-
-HamburgerMenu.propTypes = {
-  onClick: propTypes.func,
-};
-
-const CrossMenu = ({onClick}) => (
-  <HamburgerMenuStyles
-    onClick={onClick}>
-    <img
-      src={crossMenu}
-      alt="cross to close the menu" />
-  </HamburgerMenuStyles>
-);
-
-CrossMenu.propTypes = {
-  onClick: propTypes.func,
-};
-
-// Bar Options
-
-const BarOptionsStyles = styled.section`
-    display: flex;
-    gap: 1rem;
-`;
-
-/**
- * desktop version of navbar overlay basically
- * the links on the right side
- */
-const BarOptions = ({options}) => {
-  const history = useHistory();
-  return (
-    <BarOptionsStyles>
-      {
-        options.map(
-            (option, i) =>
-              <Option
-                {...option}
-                key={i}
-              />,
-        )
-      }
-    </BarOptionsStyles>
-  );
-};
-
-BarOptions.propTypes = {
-  options: propTypes.array.isRequired,
-};
-
-// Logo
-
-const LogoStyles = styled(Option)`
-  text-decoration: none;
-`;
-const Logo = () => {
-  const history = useHistory();
-  return (
-    <LogoStyles onClick={
-      () => {
-        history.push('/');
-      }
-    }
-    text='practice.design'
-    />);
-};
 
 
 const NavbarStyles = styled.section`
@@ -163,57 +94,16 @@ const NavbarStyles = styled.section`
  */
 function Navbar({...oP}) {
   const {user} = useContext(UserContext);
+
   const history = useHistory();
   const [isExpanded, setIsExpanded] = useState(false);
   const handleToggleExpanded = () => setIsExpanded((p) => !p);
 
-  const SignedInNavbarOptions = [
-    {
-      text: 'my challenges',
-      onClick: () => {
-        history.push('/my_challenges');
-      },
-    },
-    {
-      text: 'settings',
-      onClick: () => {
-        history.push('/settings');
-      },
-    },
-    {
-      text: 'log out',
-      onClick: () => {
-        doLogOut();
-      },
-    },
-  ];
-
-  const AnonymousNavbarOptions = [
-    {
-      text: 'about',
-      onClick: () => {
-        history.push('/about');
-      },
-    },
-    {
-      text: 'sign up',
-      onClick: () => {
-        history.push('/signup');
-      },
-    },
-    {
-      text: 'login',
-      onClick: () => {
-        history.push('/login');
-      },
-    },
-  ];
-
   let options = [];
   if (user) {
-    options = SignedInNavbarOptions;
+    options = signedInNavbarOptions(history);
   } else {
-    options = AnonymousNavbarOptions;
+    options = anonymousNavbarOptions(history);
   }
 
 
@@ -222,20 +112,46 @@ function Navbar({...oP}) {
 
   return (
     <NavbarStyles {...oP}>
-      <Logo />
-      { (!isMobile) &&
-                <BarOptions options={options} />
-      }
+      {/* Logo */}
+      <Option
+        onClick={
+          () => {
+            history.push('/');
+          }
+        }
+        text='practice.design'
+      />
+
       { // hamburger menu
         isMobile &&
-                <HamburgerMenu onClick={handleToggleExpanded} />
+                <Icon src={hamburgerMenu} onClick={handleToggleExpanded} />
+      }
+
+      { (!isMobile) && // desktop options
+        <DesktopOptionsStyles>
+          {
+            options.map(
+                (option, i) =>
+                  <Option
+                    {...option}
+                    key={i}
+                  />,
+            )
+          }
+        </DesktopOptionsStyles>
       }
 
       {
-        (isMobile && isExpanded) &&
-                <NavbarOverlay options={options}
-                  onClose={handleToggleExpanded}
-                />
+        (isMobile && isExpanded) && // mobile options
+        <MobileOptionsStyles>
+          {
+            options.map((option, i) =>
+              <Option key={i} {...option} onClick={
+                (e) => onClose() && option.onClick(e)
+              }/>)
+          }
+          <Icon src={crossMenu} onClick={onClose}/>
+        </MobileOptionsStyles>
       }
     </NavbarStyles>
   );

@@ -1,10 +1,6 @@
 module.exports = {
   "stories": [
-    '../src/components/atoms/**/*.stories.js',
-    '../src/components/organisms/**/*.stories.js',
-    '../src/components/sections/**/*.stories.js',
-    '../src/components/pages/**/*.stories.js',
-    // TODO: change this to work lmao
+    '../src/components/**/*.stories.js',
   ],
   "addons": [
     "@storybook/addon-links",
