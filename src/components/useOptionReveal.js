@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
-import Option from './Option';
+import Option from './atoms/Option';
+
+
+// TODO: turn this into a more generalized hook
+// so that it can be used in isEditing in settings
 
 /**
  * hook to optionally view some content

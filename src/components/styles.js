@@ -65,7 +65,6 @@ const reset = css`
   }
 `;
 
-
 export const GlobalStyle = createGlobalStyle`
   ${reset}
   body {

@@ -2,17 +2,20 @@ import React, {useState, useEffect} from 'react';
 import {getAuth, onAuthStateChanged, sendEmailVerification}
   from 'firebase/auth';
 import propTypes from 'prop-types';
-import Toast from './Toast';
-import Modal from './Modal';
-import Info from './Info';
-import TextInput from './TextInput';
+
+import Toast from './atoms/Toast';
+import Modal from './organisms/Modal';
+import Info from './atoms/Info';
+import TextInput from './atoms/TextInput';
 import {setField} from './utils';
-import TextButton from './TextButton';
+import TextButton from './atoms/Button/TextButton';
 import doCheckUsername from '../api/doCheckUsername';
 import doUpdateUsername from '../api/doUpdateUsername';
 
 
-const UserContext = React.createContext();
+const UserContext = React.createContext({
+  user: 'this is a mock, completely unreal user lmao',
+});
 
 const UsernameModal = ({removeMe}) => {
   const [username, setUsername] = useState('');
@@ -68,7 +71,8 @@ function UserContextProvider(props) {
 
   const auth = getAuth();
 
-  const afterAuth = () => {
+  const afterAuth = (nUser) => {
+    // don't use user directly
     if (nUser && !nUser.emailVerified) {
       sendEmailVerification(nUser).then(
           () => {
@@ -96,6 +100,7 @@ function UserContextProvider(props) {
             (nUser) => {
               setUser(nUser);
               setIsWaiting(false);
+              afterAuth(nUser);
             },
         );
       },

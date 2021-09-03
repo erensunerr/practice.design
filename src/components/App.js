@@ -7,26 +7,27 @@ import {defaultTheme, GlobalStyle} from './styles';
 import '../api/firebase_init';
 import {UserContextProvider} from './UserContext';
 
-import Navbar from './Navbar';
-import Footer from './Footer';
-import HomePage from './HomePage';
-import AboutPage from './AboutPage';
-import LoginPage from './LoginPage';
-import SignupPage from './SignupPage';
-import SettingsPage from './SettingsPage';
+import Navbar from './sections/Navbar';
+import Footer from './sections/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+import SettingsPage from './pages/SettingsPage';
 
 // TODO: add theme variable for touchscreen.
-
 
 const ActiveAreaStyles = styled.section`
   padding: 8rem 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 `;
+
 /**
  * practice.design lol
  */
 function App() {
+  // TODO: extract all context providers into one global provider
   return (
     <>
       <Router>
