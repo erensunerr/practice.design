@@ -17,7 +17,7 @@ const UnstyledSocialsList = ({socials, ...oP}) => {
                 key={i}
                 text={s}
                 onClick={
-                  (e) => console.log('redirect to ', s)
+                  (e) => window.open(s)
                 }
               />
             ,
