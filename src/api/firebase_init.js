@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import {initializeApp} from 'firebase/app';
 import {getAuth, connectAuthEmulator} from 'firebase/auth';
+import {getFirestore, connectFirestoreEmulator} from 'firebase/firestore';
+
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDAQDzYvKlxM3zBlx5E1axksFNoYkvSTm4',
@@ -19,6 +21,9 @@ initializeApp(firebaseConfig);
 if (location.hostname === 'localhost') {
   const auth = getAuth();
   connectAuthEmulator(auth, 'http://localhost:9099');
+
+  const db = getFirestore();
+  connectFirestoreEmulator(db, 'localhost', 5608);
 }
 
 

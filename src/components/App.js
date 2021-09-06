@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import {ThemeProvider} from 'styled-components';
 
-import {defaultTheme, GlobalStyle} from './styles';
 import '../api/firebase_init';
+import {defaultTheme, GlobalStyle} from './styles';
 import {UserContextProvider} from './UserContext';
 
 import Navbar from './sections/Navbar';
@@ -14,6 +14,7 @@ import AboutPage from './pages/AboutPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import SettingsPage from './pages/SettingsPage';
+import ProfilePage from './pages/ProfilePage';
 
 // TODO: add theme variable for touchscreen.
 
@@ -51,6 +52,9 @@ function App() {
                 </Route>
                 <Route path='/settings' exact>
                   <SettingsPage />
+                </Route>
+                <Route path='/user/:uid' exact>
+                  <ProfilePage />
                 </Route>
               </Switch>
             </ActiveAreaStyles>

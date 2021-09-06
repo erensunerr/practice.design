@@ -8,9 +8,9 @@ import Button from './Button';
 /**
  * Specialized Button, props except text are spread to Button.
  */
-function TextButton({text, children, ...otherProps}) {
+function TextButton({text, children, ...oP}) {
   return (
-    <Button {...otherProps}>
+    <Button {...oP}>
       <Typography.BodyText>{children || text}</Typography.BodyText>
     </Button>
   );
@@ -21,4 +21,6 @@ TextButton.propTypes = {
   children: propTypes.node,
 };
 
-export default TextButton;
+const StyledTextButton = styled(TextButton)``;
+
+export default StyledTextButton;

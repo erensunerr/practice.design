@@ -12,18 +12,13 @@ const InputStyles = styled.input`
     }
 `;
 
-export const TextInputStyles = styled.div`
-  display: flex;
-  flex-flow: column;
-  gap: .25rem;
-`;
 
 /**
  * Textual input.
  */
-function TextInput({label, error, ...otherProps}) {
+function TextInput({label, error, className, ...otherProps}) {
   return (
-    <TextInputStyles>
+    <div className={className}>
       <Typography.SmallText>{label}</Typography.SmallText>
       <InputStyles
         placeholder={label}
@@ -31,7 +26,7 @@ function TextInput({label, error, ...otherProps}) {
         {...otherProps}
       />
       <Typography.SmallText>{error}</Typography.SmallText>
-    </TextInputStyles>
+    </div>
   );
 }
 
@@ -45,6 +40,12 @@ TextInput.propTypes = {
   value: propTypes.string.isRequired,
   type: propTypes.string,
   error: propTypes.string,
+  className: propTypes.string,
 };
 
-export default TextInput;
+const StyledTextInput = styled(TextInput)`
+  display: flex;
+  flex-flow: column;
+  gap: .25rem;
+`;
+export default StyledTextInput;

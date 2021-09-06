@@ -4,15 +4,15 @@ import propTypes from 'prop-types';
 
 import Typography from '../atoms/Typography';
 import useAuthRedirect from '../useAuthRedirect';
-import {UserContext} from '../UserContext';
 import TextButton from '../atoms/Button/TextButton';
 import Option from '../atoms/Option';
 import TextInput from '../atoms/TextInput';
 import {setField} from '../utils';
-import doCheckUsername from '../../api/doCheckUsername';
-import doUpdateUsername from '../../api/doUpdateUsername';
-import doSetPassword from '../../api/doUpdatePassword';
 import Toast from '../atoms/Toast';
+import useUser from '../useUser';
+import User, {updateUserData} from '../../api/user';
+import SocialsList from '../organisms/SocialsList';
+import getGrid from '../utils/getGrid';
 
 // TODO: extract username and email section into the same thing
 
@@ -42,12 +42,8 @@ const UsernameSection = ({user}) => {
     'info': setToast,
   };
 
-  // check username every time it changes, animate based on that :)
+  // TODO:check username every time it changes, animate based on that :)
   // maybe change username to some other state that you can use to animate
-  useEffect(
-      () => doCheckUsername(username, errorSetters),
-      [username],
-  );
 
   const Styles =
     isEditing ?
@@ -73,7 +69,9 @@ const UsernameSection = ({user}) => {
               text={username ? `call me ${username}` : 'change username'}
               onClick={
                 () => {
-                  doUpdateUsername(username, errorSetters);
+                  const newUser = new User(user);
+                  newUser.username = username;
+                  updateUserData(newUser);
                   setIsEditing(false);
                 }
               }
@@ -82,7 +80,7 @@ const UsernameSection = ({user}) => {
 
         <>
           <Typography.BodyText>
-            username: @{user.displayName}
+            username: @{user.username}
           </Typography.BodyText>
           <Option text='change' onClick={() => setIsEditing(true)} />
         </>
@@ -102,12 +100,48 @@ UsernameSection.propTypes = {
 };
 
 
+const Grid = getGrid(4);
 /**
  * da da yada duba doo
  */
-function SocialsSection() {
-  // TODO: code this
+function SocialsSection({...oP}) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [socialLink, setSocialLink] = useState('');
+  const {user} = useUser();
+  const {socials} = user;
+  return (
+    <Grid {...oP}>
+      <Option text='+ add social' onClick={() => setIsEditing((p) => !p)}/>
+      {isEditing &&
+        <>
+          <TextInput
+            label='social link'
+            onChange={setField(setSocialLink)}
+            value={socialLink}
+          />
+          <TextButton
+            text='add it'
+            onClick={
+              () => {
+                const userWithSocial = new User(user);
+                console.log('uws: ', userWithSocial);
+                userWithSocial.socials.push(socialLink);
+                updateUserData(userWithSocial);
+              }
+            }
+          />
+        </>
+      }
+      <SocialsList socials={socials} />
+    </Grid>
+  );
 }
+
+const StyledSocialsSection = styled(SocialsSection)`
+  ${TextInput} {
+    width: 100%;
+  }
+`;
 
 const SettingsPageStyles = styled.section`
   display: flex;
@@ -132,7 +166,8 @@ const FormStyles = styled.section`
  */
 function SettingsPage(props) {
   useAuthRedirect(true);
-  const {user, isWaiting} = useContext(UserContext);
+  const {user, isWaiting} = useUser();
+
 
   if (!isWaiting && user) {
     return (
@@ -144,7 +179,7 @@ function SettingsPage(props) {
         </FormStyles>
         <FormStyles>
           <Typography.Subtitle>{`for "social" people`}</Typography.Subtitle>
-          <Typography.BodyText>socials section</Typography.BodyText>
+          <StyledSocialsSection />
         </FormStyles>
       </SettingsPageStyles>
     );

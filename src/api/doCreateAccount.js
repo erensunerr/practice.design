@@ -1,7 +1,7 @@
 import {getAuth, createUserWithEmailAndPassword}
   from 'firebase/auth';
 
-import doUpdateUsername from './doUpdateUsername';
+import User, {updateUserData} from './user';
 
 /**
  * create an account
@@ -16,10 +16,18 @@ function doCreateAccount(username, email, pass, errorSetters) {
     errorSetters.username('you need a username');
   }
   createUserWithEmailAndPassword(auth, email, pass).then(
-      () => {
-        doUpdateUsername(username);
+      (auth) => {
+        const newUser = new User(
+            {
+              uid: auth.user.uid,
+              username,
+              auth,
+            },
+        );
+        console.log('updating user data in doCreateAccount with', newUser);
+        updateUserData(newUser);
       },
-  )
+  ) // if auth error
       .catch((error) => {
         if (error.code === 'auth/email-already-in-use') {
           errorSetters.email('you already used that email. 😿');

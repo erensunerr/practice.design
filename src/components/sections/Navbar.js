@@ -33,7 +33,13 @@ const anonymousNavbarOptions = (history) => [
   },
 ];
 
-const signedInNavbarOptions = (history) => [
+const signedInNavbarOptions = (history, user) => [
+  {
+    text: `@${user.username}`,
+    onClick: () => {
+      history.push(`/user/${user.uid}`);
+    },
+  },
   {
     text: 'my challenges',
     onClick: () => {
@@ -101,7 +107,7 @@ function Navbar({...oP}) {
 
   let options = [];
   if (user) {
-    options = signedInNavbarOptions(history);
+    options = signedInNavbarOptions(history, user);
   } else {
     options = anonymousNavbarOptions(history);
   }
@@ -147,10 +153,13 @@ function Navbar({...oP}) {
           {
             options.map((option, i) =>
               <Option key={i} {...option} onClick={
-                (e) => onClose() && option.onClick(e)
+                (e) => {
+                  option.onClick(e);
+                  handleToggleExpanded();
+                }
               }/>)
           }
-          <Icon src={crossMenu} onClick={onClose}/>
+          <Icon src={crossMenu} onClick={handleToggleExpanded}/>
         </MobileOptionsStyles>
       }
     </NavbarStyles>

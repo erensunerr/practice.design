@@ -13,12 +13,12 @@ function useOptionReveal(label, content, def) {
   const [reveal, setReveal] = useState(def);
   const toggleReveal = () => setReveal((p) => !p);
   return [
-    <Option text={label} key={-1} onClick={toggleReveal}/>,
+    <Option text={label} key={-1} onClick={toggleReveal}/>, // option
     <>
       { reveal &&
         content
       }
-    </>,
+    </>, // content
   ];
 }
 

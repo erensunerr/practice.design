@@ -122,7 +122,6 @@ const HomePageStyles = styled.section`
  * home page
  */
 function HomePage({}) {
-  console.log('inside home page');
   return (
     <HomePageStyles>
       <TitleSection />

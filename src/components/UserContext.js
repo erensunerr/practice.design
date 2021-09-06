@@ -1,64 +1,38 @@
 import React, {useState, useEffect} from 'react';
 import {getAuth, onAuthStateChanged, sendEmailVerification}
   from 'firebase/auth';
+import {doc, onSnapshot, getFirestore} from 'firebase/firestore';
 import propTypes from 'prop-types';
 
 import Toast from './atoms/Toast';
-import Modal from './organisms/Modal';
-import Info from './atoms/Info';
-import TextInput from './atoms/TextInput';
-import {setField} from './utils';
-import TextButton from './atoms/Button/TextButton';
-import doCheckUsername from '../api/doCheckUsername';
-import doUpdateUsername from '../api/doUpdateUsername';
+import UsernameModal from './sections/UsernameModal';
+import User, {getUserByUid, updateUserData} from '../api/user';
+
+const UserContext = React.createContext();
 
 
-const UserContext = React.createContext({
-  user: 'this is a mock, completely unreal user lmao',
-});
-
-const UsernameModal = ({removeMe}) => {
-  const [username, setUsername] = useState('');
-  const [error, setError] = useState('');
-  const [toast, setToast] = useState('');
-
-  const errorSetters = {
-    'info': setToast,
-    'username': setError,
-  };
-  useEffect(
-      () => {
-        doCheckUsername(username, errorSetters);
-      },
-      [username, setError],
-  );
-
-  return (
-    <Modal>
-      <Info
-        title='now pick a username'
-        text='You can always change it later in settings.'
-      />
-      <TextInput
-        value={username}
-        onChange={setField(setUsername)}
-        label={'username'}
-      />
-      <TextButton
-        text={`call me ${username}`}
-        disabled={error}
-        error={error}
-        onClick={() => doUpdateUsername(username, errorSetters) && removeMe()}
-      />
-      {
-        toast &&
-        <Toast text={toast} />
-      }
-    </Modal>
-  );
+const afterAuth = async (nUser, setToDisplay) => {
+  // if user's email is not verified send toast
+  if (nUser && !nUser.emailVerified) {
+    sendEmailVerification(nUser).then(
+        () => {
+          setToDisplay(
+              <Toast
+                text='email verification sent'
+              />,
+          );
+        },
+    );
+  }
 };
-UsernameModal.propTypes = {
-  removeMe: propTypes.func,
+
+const afterFirestoreAuth = async (user, setToDisplay) => {
+  // if the user doesn't have a username, display modal,
+  if (user && user.username == '') {
+    setToDisplay(
+        <UsernameModal removeMe={() => setToDisplay(null)}/>,
+    );
+  }
 };
 
 /**
@@ -66,50 +40,57 @@ UsernameModal.propTypes = {
  */
 function UserContextProvider(props) {
   const [user, setUser] = useState(null);
+  const [uid, setUid] = useState(null);
   const [isWaiting, setIsWaiting] = useState(true);
   const [toDisplay, setToDisplay] = useState(null);
 
   const auth = getAuth();
 
-  const afterAuth = (nUser) => {
-    // don't use user directly
-    if (nUser && !nUser.emailVerified) {
-      sendEmailVerification(nUser).then(
-          () => {
-            setToDisplay(
-                <Toast
-                  text='email verification sent'
-                />,
-            );
-          },
-      );
-    }
-
-    if (nUser && nUser.emailVerified && !nUser.displayName) {
-      setToDisplay(
-          <UsernameModal removeMe={() => setToDisplay(null)}/>,
-      );
-    }
-  };
-
   useEffect(
+      // update uid on auth change
       () => {
         setIsWaiting(true);
         onAuthStateChanged(
             auth,
             (nUser) => {
-              setUser(nUser);
-              setIsWaiting(false);
-              afterAuth(nUser);
+              if (nUser) {
+                setUid(nUser.uid);
+                afterAuth(nUser, setToDisplay);
+              }
             },
         );
       },
       [auth],
   );
+
+  useEffect(
+      () => { // update user on uid change
+        if (uid) {
+          console.log('subscribed to snapshot for user, ', uid);
+          const db = getFirestore();
+          const unsub = onSnapshot(
+              doc(db, 'users', uid),
+              (d) => {
+                console.log(d);
+                let newUser = new User({uid, ...user});
+                newUser = {...newUser, ...d.data()};
+                setUser(newUser);
+                setIsWaiting(false);
+                afterFirestoreAuth(newUser, setToDisplay);
+              },
+          );
+          return unsub;
+        }
+      },
+      [uid],
+  );
+
   const value = {
     user: user,
     isWaiting: isWaiting,
   };
+
+  console.log('user context: ', value);
 
   return (
     <UserContext.Provider value={value}>
