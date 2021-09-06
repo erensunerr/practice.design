@@ -28,7 +28,7 @@ const afterAuth = async (nUser, setToDisplay) => {
 
 const afterFirestoreAuth = async (user, setToDisplay) => {
   // if the user doesn't have a username, display modal,
-  if (user && user.username == '') {
+  if (user && user.username == null || user.username == '') {
     setToDisplay(
         <UsernameModal removeMe={() => setToDisplay(null)}/>,
     );
