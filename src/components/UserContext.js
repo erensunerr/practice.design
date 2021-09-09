@@ -66,12 +66,10 @@ function UserContextProvider(props) {
   useEffect(
       () => { // update user on uid change
         if (uid) {
-          console.log('subscribed to snapshot for user, ', uid);
           const db = getFirestore();
           const unsub = onSnapshot(
               doc(db, 'users', uid),
               (d) => {
-                console.log(d);
                 let newUser = new User({uid, ...user});
                 newUser = {...newUser, ...d.data()};
                 setUser(newUser);
@@ -90,7 +88,6 @@ function UserContextProvider(props) {
     isWaiting: isWaiting,
   };
 
-  console.log('user context: ', value);
 
   return (
     <UserContext.Provider value={value}>

@@ -124,7 +124,6 @@ function SocialsSection({...oP}) {
             onClick={
               () => {
                 const userWithSocial = new User(user);
-                console.log('uws: ', userWithSocial);
                 userWithSocial.socials.push(socialLink);
                 updateUserData(userWithSocial);
               }

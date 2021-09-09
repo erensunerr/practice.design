@@ -3,19 +3,14 @@ import styled from 'styled-components';
 import propTypes from 'prop-types';
 import getGrid from '../utils/getGrid';
 
-export const CardStyles = styled(getGrid(4))`
-  align-items: flex-start;
-  & > * {
-    width: 100%;
-  }
-`;
+const Grid = getGrid(4);
 
 /**
  * Generic card. All other props are spread to the div element.
  */
 function Card(props) {
   return (
-    <CardStyles {...props}/>
+    <Grid {...props}/>
   );
 }
 
@@ -23,4 +18,11 @@ Card.propTypes = {
   children: propTypes.node.isRequired,
 };
 
-export default Card;
+export default styled(Card)`
+  align-items: flex-start;
+  min-width: 200px;
+  max-width: 400px;
+  & > * {
+    width: 100%;
+  }
+`;

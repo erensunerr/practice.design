@@ -29,7 +29,6 @@ function ProfilePage({uid: puid, ...oP}) {
   const params = useParams();
   const uid = params.uid === undefined ? puid : params.uid;
 
-  console.log('uid:  ', uid);
   useEffect(
       async () => {
         const po = await getUserByUid(uid);

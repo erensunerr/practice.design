@@ -4,10 +4,9 @@ import propTypes from 'prop-types';
 
 import Typography from '../../atoms/Typography';
 import Card from '../../atoms/Card';
-import FigmaImage from '../../atoms/FigmaImage';
 import Option from '../../atoms/Option';
 import TextButton from '../../atoms/Button/TextButton';
-
+import {useHistory} from 'react-router-dom';
 
 const CardOptionStyles = styled(Option)`
   text-align: right;
@@ -21,27 +20,32 @@ const SolutionCardStyles = styled(Card)`
 /**
  * Specialized card for solution.
  */
-function SolutionCard({title, img, by, ...oP}) {
+function SolutionCard({solution, ...oP}) {
+  const history = useHistory();
+  console.log('creating solution card with', solution);
   return (
     <SolutionCardStyles {...oP}>
-      <Typography.BodyText>{title}</Typography.BodyText>
-      <FigmaImage {...img} />
-      <CardOptionStyles {...by} />
-      <TextButton text='I wanna try it too' />
+      <Typography.BodyText>{solution.challenge.title}</Typography.BodyText>
+      <CardOptionStyles
+        text={`solved by @${solution.by.username}`}
+        onClick={
+          () => {
+            history.push(`/user/${solution.by.uid}`);
+          }
+        } />
+      <TextButton
+        text='see figma'
+        onClick={
+          () => {
+            history.push(`${solution.figmaUrl}`);
+          }
+        }/>
     </SolutionCardStyles>
   );
 }
 
 SolutionCard.propTypes = {
-  title: propTypes.string,
-  /**
-   * Spread to Option.
-   */
-  by: propTypes.object,
-  /**
-   * Spread to FigmaImage.
-   */
-  img: propTypes.object,
+  solution: propTypes.object,
 };
 
 export default SolutionCard;

@@ -6,7 +6,6 @@ import {UserContext} from './UserContext';
  */
 function useUser() {
   const user = useContext(UserContext);
-  console.log('use user: ', user);
   return user;
 }
 

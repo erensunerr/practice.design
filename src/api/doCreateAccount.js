@@ -21,10 +21,8 @@ function doCreateAccount(username, email, pass, errorSetters) {
             {
               uid: auth.user.uid,
               username,
-              auth,
             },
         );
-        console.log('updating user data in doCreateAccount with', newUser);
         updateUserData(newUser);
       },
   ) // if auth error

@@ -12,9 +12,15 @@ const Template = (args) => <SolutionCard {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  title: 'Spotify Personas',
-  by: {
-    text: 'solved by @johntravolta',
+  solution: {
+    by: {
+      username: 'johntravolta',
+      uid: 'adsfasfd',
+    },
+    challenge: {
+      title: 'some title',
+      id: 'asdfasafs',
+    },
   },
 };
 

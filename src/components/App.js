@@ -6,6 +6,7 @@ import {ThemeProvider} from 'styled-components';
 import '../api/firebase_init';
 import {defaultTheme, GlobalStyle} from './styles';
 import {UserContextProvider} from './UserContext';
+import '../api/challenge';
 
 import Navbar from './sections/Navbar';
 import Footer from './sections/Footer';
@@ -15,6 +16,8 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import SettingsPage from './pages/SettingsPage';
 import ProfilePage from './pages/ProfilePage';
+import MyChallenges from './pages/MyChallenges';
+import CreateChallenge from './pages/CreateChallenge';
 
 // TODO: add theme variable for touchscreen.
 
@@ -55,6 +58,12 @@ function App() {
                 </Route>
                 <Route path='/user/:uid' exact>
                   <ProfilePage />
+                </Route>
+                <Route path='/my_challenges' exact>
+                  <MyChallenges />
+                </Route>
+                <Route path='/create' exact>
+                  <CreateChallenge />
                 </Route>
               </Switch>
             </ActiveAreaStyles>

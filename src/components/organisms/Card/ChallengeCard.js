@@ -8,6 +8,7 @@ import TextButton from '../../atoms/Button/TextButton';
 import CategoriesSelector from '../CategoriesSelector';
 import Option from '../../atoms/Option';
 import FigmaImage from '../../atoms/FigmaImage';
+import {useHistory} from 'react-router-dom';
 
 
 const CardOptionStyles = styled(Option)`
@@ -20,36 +21,30 @@ const ChallengeCardStyles = styled(Card)`
 /**
  * Specialized Card for a challenge.
  */
-function ChallengeCard({title, by, img, categories, onStart, ...oP}) {
+function ChallengeCard({challenge, ...oP}) {
+  const history = useHistory();
   return (
     <ChallengeCardStyles {...oP}>
-      <Typography.Subtitle>{title}</Typography.Subtitle>
-      <CardOptionStyles {...by}/>
-      <FigmaImage {...img}/>
-      <CategoriesSelector categories={categories} />
-      <TextButton text='accept the challenge' onClick={onStart}/>
+      <Typography.BodyText>{challenge.title}</Typography.BodyText>
+      <CardOptionStyles
+        text={`by @${challenge.by.username}`}
+        onClick={
+          () => {
+            history.push(`/user/${challenge.by.uid}`);
+          }
+        }
+      />
+      <TextButton text='accept the challenge' onClick={
+        () => {
+          history.push(`/challenge/${challenge.id}`);
+        }
+      }/>
     </ChallengeCardStyles>
   );
 }
 
 ChallengeCard.propTypes = {
-  /**
-   * Spread to FigmaImage.
-   */
-  img: propTypes.object,
-  title: propTypes.string,
-  /**
-   * spread to option
-   */
-  by: propTypes.object,
-  /**
-   * goes to categories selector
-   */
-  categories: propTypes.array,
-  /**
-   * onClick of the start button
-   */
-  onStart: propTypes.onClick,
+  challenge: propTypes.object,
 };
 
 export default ChallengeCard;

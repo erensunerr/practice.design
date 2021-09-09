@@ -12,18 +12,14 @@ const Template = (args) => <ChallengeCard {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  title: 'Spotify Personas Exercise',
-  by: {
-    text: 'by @john123',
+  challenge: {
+    title: 'challenge title',
+    id: 'xxchallengexxid',
+    by: {
+      username: 'johnny',
+      uid: 'somexxuidxx',
+    },
   },
-  categories: [
-    {text: 'wireframing'},
-    {text: 'user personas'},
-    {text: 'stories'},
-    {text: 'mockups'},
-    {text: 'some other long category'},
-    {text: 'whats uppp'},
-  ],
 };
 
 export const Mobile = (args) => (

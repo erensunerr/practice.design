@@ -17,7 +17,7 @@ const UnstyledSocialsList = ({socials, ...oP}) => {
                 key={i}
                 text={s}
                 onClick={
-                  (e) => window.open(s)
+                  (e) => window.open(`http://${s}`, '_blank')
                 }
               />
             ,

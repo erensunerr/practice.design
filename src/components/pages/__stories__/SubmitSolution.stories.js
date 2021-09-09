@@ -1,21 +1,20 @@
 import React from 'react';
-import SubmitForm from '../SubmitForm';
+import SubmitSolution from '../SubmitSolution';
 import MobileContainer from '../../utils/MobileContainer';
 
 export default {
-  component: SubmitForm,
-  title: 'Sections / Submit Form',
+  component: SubmitSolution,
+  title: 'Pages / Submit Solution',
 };
 
-const Template = (args) => <SubmitForm {...args} />;
+const Template = (args) => <SubmitSolution {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
 };
 
-
 export const Mobile = (args) => (
-  <MobileContainer><SubmitForm {...args} /></MobileContainer>
+  <MobileContainer><SubmitSolution {...args} /></MobileContainer>
 );
 Mobile.args = {
   ...Default.args,

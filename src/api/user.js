@@ -5,16 +5,25 @@ import {doc, setDoc, getDoc, getFirestore} from 'firebase/firestore';
  * user constructor
  */
 export default function User(
-    {uid, username, socials, challenges, solutions, auth},
+    {
+      uid,
+      username,
+      socials,
+      challenges,
+      activeChallenges,
+      solutions,
+      userInterviews,
+    },
 ) {
-  console.log('creating new user called @', username);
   return (
     {
       uid: uid || '',
       username: username || null,
       socials: socials || [],
       challenges: challenges || [],
+      activeChallenges: activeChallenges || [],
       solutions: solutions || [],
+      userInterviews: userInterviews || false,
     }
   );
 }
@@ -32,7 +41,7 @@ export async function getUserByUid(uid) {
   const d = await getDoc(
       doc(db, 'users', uid),
   ).catch(
-      (e) => console.log('get doc error: ', e),
+      (e) => {},
   );
 
 
@@ -53,7 +62,6 @@ export async function getUserByUid(uid) {
     updateUserData(user);
   }
 
-  console.log('getUserByUid doc: ', d, d.data());
   return user;
 }
 
@@ -63,7 +71,6 @@ export async function getUserByUid(uid) {
  */
 export async function updateUserData(newUserData) {
   const db = getFirestore();
-  console.log('updating user with', newUserData);
   if (newUserData.uid) {
     await setDoc(
         doc(db, 'users', newUserData.uid),
@@ -72,7 +79,7 @@ export async function updateUserData(newUserData) {
           merge: true,
         },
     ).catch(
-        (e) => console.log('update user error: ', e),
+        (e) => {},
     );
   } else {
     throw new Error('your user gotta have a uid bruv');
