@@ -1,212 +1,778 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Button Default 1`] = `
-.c0 {
+exports[`Storyshots Atoms / Buttons / Button Default 1`] = `
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
   padding: 1rem 1.5rem;
-  border: 1px solid #101010;
   border-radius: .5rem;
   width: 100%;
+  border: 1px solid #101010;
 }
 
-.c0 p {
-  text-align: center;
-  -webkit-flex: 1 0;
-  -ms-flex: 1 0;
-  flex: 1 0;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
+.c2:focus-visible {
+  outline: none;
 }
 
-.c1 {
+.c3 {
   cursor: pointer;
 }
 
-<button
-  className="c0 c1"
->
-  <p>
-    I'm a button.
-  </p>
-</button>
-`;
-
-exports[`Storyshots Button Disabled 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border: 1px solid #101010;
-  border-radius: .5rem;
-  width: 100%;
-}
-
-.c0 p {
-  text-align: center;
-  -webkit-flex: 1 0;
-  -ms-flex: 1 0;
-  flex: 1 0;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-}
-
-.c1 {
-  color: #888888;
-  border-color: #888888;
-  cursor: not-allowed;
-}
-
-.c1 img {
-  opacity: 0.5;
-}
-
-<button
-  className="c0 c1"
->
-  <p>
-    I'm a button.
-  </p>
-</button>
-`;
-
-exports[`Storyshots Button With Image 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border: 1px solid #101010;
-  border-radius: .5rem;
-  width: 100%;
-}
-
-.c0 p {
-  text-align: center;
-  -webkit-flex: 1 0;
-  -ms-flex: 1 0;
-  flex: 1 0;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-}
-
-.c1 {
+.c3:focus-visible {
   cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
 }
 
-<button
-  className="c0 c1"
->
-  <img
-    alt="google logo"
-    src="google_logo.svg"
-  />
-   
-  <p>
-    I'm a button.
-  </p>
-   
-  <img
-    alt="google logo"
-    src="google_logo.svg"
-  />
-</button>
-`;
-
-exports[`Storyshots Button With Image Disabled 1`] = `
-.c0 {
+.c1 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border: 1px solid #101010;
-  border-radius: .5rem;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 > * {
   width: 100%;
 }
 
-.c0 p {
-  text-align: center;
-  -webkit-flex: 1 0;
-  -ms-flex: 1 0;
-  flex: 1 0;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-}
-
-.c1 {
-  color: #888888;
-  border-color: #888888;
-  cursor: not-allowed;
-}
-
-.c1 img {
-  opacity: 0.5;
-}
-
-<button
-  className="c0 c1"
->
-  <img
-    alt="google logo"
-    src="google_logo.svg"
-  />
-   
-  <p>
-    I'm a button.
-  </p>
-   
-  <img
-    alt="google logo"
-    src="google_logo.svg"
-  />
-</button>
-`;
-
-exports[`Storyshots Cards / ChallengeCard Default 1`] = `
 .c0 {
+  max-width: 316px;
   margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 "
+  >
+    <button
+      className="c2 c3"
+      onClick={[Function]}
+    >
+      <p
+        className="c4"
+      >
+        A textual child
+      </p>
+    </button>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Atoms / Buttons / Button Disabled 1`] = `
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c2:focus-visible {
+  outline: none;
+}
+
+.c3 {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 "
+  >
+    <button
+      className="c2 c3"
+    >
+      <p
+        className="c4"
+      >
+        A textual child
+      </p>
+    </button>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Atoms / Buttons / Button With Error 1`] = `
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c5 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c2:focus-visible {
+  outline: none;
+}
+
+.c3 {
+  cursor: pointer;
+}
+
+.c3:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 "
+  >
+    <button
+      className="c2 c3"
+      onClick={[Function]}
+    >
+      <p
+        className="c4"
+      >
+        A textual child
+      </p>
+    </button>
+    <p
+      className="c5"
+    >
+      problems problems...
+    </p>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Atoms / Buttons / Image Button Default 1`] = `
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c2:focus-visible {
+  outline: none;
+}
+
+.c3 {
+  cursor: pointer;
+}
+
+.c3:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 "
+  >
+    <button
+      className="c2 c3"
+      onClick={[Function]}
+    >
+      <img
+        alt=""
+        src="google_logo.svg"
+      />
+       
+      <p
+        className="c4"
+      >
+        sign in with google
+      </p>
+       
+      <img
+        alt=""
+        src="google_logo.svg"
+      />
+    </button>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Atoms / Buttons / Text Button Default 1`] = `
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c2:focus-visible {
+  outline: none;
+}
+
+.c3 {
+  cursor: pointer;
+}
+
+.c3:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 "
+  >
+    <button
+      className="c2 c3"
+      onClick={[Function]}
+    >
+      <p
+        className="c4"
+      >
+        Click Me!
+      </p>
+    </button>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Atoms / Cards / Card Default 1`] = `
+.c6 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c7 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c4 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.c2 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.c2 > * {
+  width: 100%;
+}
+
+.c3 {
+  width: 100%;
+  aspect-ratio: 1.618 / 1;
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+.c5 {
+  gap: 0;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 c2"
+  >
+    <img
+      alt="image for the associated challenge"
+      className="c3"
+      src="figma_overview.svg"
+    />
+    <section
+      className="c4 c5"
+    >
+      <h3
+        className="c6"
+      >
+        Generic Card
+      </h3>
+      <p
+        className="c7"
+      >
+        This generic card is very good and interesting. Further genericity may be achieved through fusion.
+      </p>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Atoms / Figma Image Default 1`] = `
+.c0 {
+  width: 100%;
+  aspect-ratio: 1.618 / 1;
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+<img
+  alt="image for the associated challenge"
+  className="c0"
+  src="figma_overview.svg"
+/>
+`;
+
+exports[`Storyshots Atoms / Figma Image Mobile 1`] = `
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  width: 100%;
+  aspect-ratio: 1.618 / 1;
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="image for the associated challenge"
+    className="c1"
+    src="figma_overview.svg"
+  />
+</div>
+`;
+
+exports[`Storyshots Atoms / Icon Default 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0,
+.c0 img {
+  background-color: transparent;
+}
+
+<button
+  className="c0"
+  onClick={[Function]}
+>
+  <img
+    alt="close menu"
+    src="cross_menu_icon.svg"
+  />
+</button>
+`;
+
+exports[`Storyshots Atoms / Icon Mobile 1`] = `
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1,
+.c1 img {
+  background-color: transparent;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    <img
+      alt="close menu"
+      src="cross_menu_icon.svg"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots Atoms / Info Default 1`] = `
+.c1 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c0 > * {
+  width: 100%;
+}
+
+<section
+  className="c0 "
+>
+  <h3
+    className="c1"
+  >
+    Subtitles are very interesting
+  </h3>
+  <p
+    className="c2"
+  >
+    Here's why. 
+         Because they give context about this 
+         ridiculous piece of writing
+  </p>
+</section>
+`;
+
+exports[`Storyshots Atoms / Info Mobile 1`] = `
+.c2 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 "
+  >
+    <h3
+      className="c2"
+    >
+      Subtitles are very interesting
+    </h3>
+    <p
+      className="c3"
+    >
+      Here's why. 
+         Because they give context about this 
+         ridiculous piece of writing
+    </p>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Atoms / Inputs / Text Default 1`] = `
+.c1 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c2 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c2:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -214,47 +780,428 @@ exports[`Storyshots Cards / ChallengeCard Default 1`] = `
   -webkit-flex-flow: column;
   -ms-flex-flow: column;
   flex-flow: column;
-  max-width: 20rem;
-  border-radius: .5rem .5rem 0 0;
-  overflow: hidden;
-  gap: 1rem;
-  -webkit-filter: drop-shadow(2px 4px 8px rgba(16,16,16,0.05));
-  filter: drop-shadow(2px 4px 8px rgba(16,16,16,0.05));
+  gap: .25rem;
 }
 
-.c0 img {
-  height: 220px;
-  object-fit: cover;
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    username
+  </p>
+  <input
+    autoComplete="username"
+    className="c2"
+    onChange={[Function]}
+    placeholder="username"
+    value=""
+  />
+  <p
+    className="c1"
+  />
+</div>
+`;
+
+exports[`Storyshots Atoms / Inputs / Text Mobile 1`] = `
+.c2 {
+  font-size: 8px;
+  line-height: 12px;
 }
 
-.c0 > div {
+.c3 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c3:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
 }
 
-.c0 > div > p {
-  text-align: right;
-  white-space: nowrap;
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
 }
 
-.c0 p > a {
-  color: #101010;
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      username
+    </p>
+    <input
+      autoComplete="username"
+      className="c3"
+      onChange={[Function]}
+      placeholder="username"
+      value=""
+    />
+    <p
+      className="c2"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms / Inputs / Text With Error 1`] = `
+.c1 {
+  font-size: 8px;
+  line-height: 12px;
 }
 
 .c2 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c2:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    username
+  </p>
+  <input
+    autoComplete="username"
+    className="c2"
+    onChange={[Function]}
+    placeholder="username"
+    value=""
+  />
+  <p
+    className="c1"
+  >
+    I am some error
+  </p>
+</div>
+`;
+
+exports[`Storyshots Atoms / Option Default 1`] = `
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c0 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c0:hover,
+.c0:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+<button
+  className="c0"
+  onClick={[Function]}
+>
+  <p
+    className="c1"
+  >
+    home
+  </p>
+</button>
+`;
+
+exports[`Storyshots Atoms / Option Within Paragraph 1`] = `
+.c0 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c0:hover,
+.c0:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+<p>
+  I am some text about some 
+  <button
+    className="c0"
+    onClick={[Function]}
+  >
+    optional
+  </button>
+   stuff.
+</p>
+`;
+
+exports[`Storyshots Atoms / Tag Default 1`] = `
+.c1 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c0 {
+  border-radius: 2rem;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: .25rem .5rem;
+  border: 2px solid #101010;
+  color: #F0F0F0;
+  background-color: #101010;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+<button
+  className="c0"
+  onClick={[Function]}
+  selected={true}
+>
+  <p
+    className="c1"
+  >
+    Wireframes
+  </p>
+</button>
+`;
+
+exports[`Storyshots Atoms / Tag Static 1`] = `
+.c1 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c0 {
+  border-radius: 2rem;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: .25rem .5rem;
+  border: 2px solid #101010;
+  color: #F0F0F0;
+  background-color: #101010;
+}
+
+<button
+  className="c0"
+  onClick={[Function]}
+  selected={true}
+>
+  <p
+    className="c1"
+  >
+    Wireframes
+  </p>
+</button>
+`;
+
+exports[`Storyshots Atoms / Toast Default 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c1 {
+  position: fixed;
+  bottom: 4rem;
+  left: 50vw;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: .5rem 1rem;
   background-color: #101010;
   color: #F0F0F0;
-  border-radius: 1rem;
-  padding: .5em 1.5em;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 300;
+  border-radius: 2rem;
+}
+
+<p
+  className="c0 c1"
+  onClick={[Function]}
+>
+  🎉 Starting is 50% of the work!
+</p>
+`;
+
+exports[`Storyshots Atoms / Typography Body Text 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+<p
+  className="c0"
+>
+  I am some body text
+</p>
+`;
+
+exports[`Storyshots Atoms / Typography Bold 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c1 {
+  font-weight: 800;
+}
+
+<p
+  className="c0"
+>
+  I am some 
+  <span
+    className="c1"
+  >
+    bolded
+  </span>
+   body text
+</p>
+`;
+
+exports[`Storyshots Atoms / Typography Default 1`] = `
+.c0 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c1 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c3 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+<div>
+  <h1
+    className="c0"
+  >
+    I'm a title
+  </h1>
+  <h3
+    className="c1"
+  >
+    I'm a subtitle
+  </h3>
+  <p
+    className="c2"
+  >
+    I'm some body text. 
+          John Green is a great guy who has a big mustache.
+  </p>
+  <p
+    className="c3"
+  >
+    I'm some small text. 
+          John Green is a great guy who has a big mustache.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Atoms / Typography Small Text 1`] = `
+.c0 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+<p
+  className="c0"
+>
+  I am some small text
+</p>
+`;
+
+exports[`Storyshots Atoms / Typography Subtitle 1`] = `
+.c0 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+<h3
+  className="c0"
+>
+  I am a subtitle
+</h3>
+`;
+
+exports[`Storyshots Atoms / Typography Title 1`] = `
+.c0 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+<h1
+  className="c0"
+>
+  I am a title
+</h1>
+`;
+
+exports[`Storyshots Organisms / Cards / Challenge Card Default 1`] = `
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -263,7 +1210,688 @@ exports[`Storyshots Cards / ChallengeCard Default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: default;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  outline: none;
+}
+
+.c7 {
+  cursor: pointer;
+}
+
+.c7:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c5 > * {
+  width: 100%;
+}
+
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.c1 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c3 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c3:hover,
+.c3:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c4 {
+  text-align: right;
+}
+
+<section
+  className="c0 c1 "
+>
+  <p
+    className="c2"
+  >
+    challenge title
+  </p>
+  <button
+    className="c3 c4"
+    onClick={[Function]}
+  >
+    <p
+      className="c2"
+    >
+      by @johnny
+    </p>
+  </button>
+  <section
+    className="c5 "
+  >
+    <button
+      className="c6 c7"
+      onClick={[Function]}
+    >
+      <p
+        className="c2"
+      >
+        accept the challenge
+      </p>
+    </button>
+  </section>
+</section>
+`;
+
+exports[`Storyshots Organisms / Cards / Challenge Card Mobile 1`] = `
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c7:focus-visible {
+  outline: none;
+}
+
+.c8 {
+  cursor: pointer;
+}
+
+.c8:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c6 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.c2 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.c2 > * {
+  width: 100%;
+}
+
+.c4 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c4:hover,
+.c4:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c5 {
+  text-align: right;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 c2 "
+  >
+    <p
+      className="c3"
+    >
+      challenge title
+    </p>
+    <button
+      className="c4 c5"
+      onClick={[Function]}
+    >
+      <p
+        className="c3"
+      >
+        by @johnny
+      </p>
+    </button>
+    <section
+      className="c6 "
+    >
+      <button
+        className="c7 c8"
+        onClick={[Function]}
+      >
+        <p
+          className="c3"
+        >
+          accept the challenge
+        </p>
+      </button>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Organisms / Cards / Solution Card Default 1`] = `
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  outline: none;
+}
+
+.c7 {
+  cursor: pointer;
+}
+
+.c7:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c5 > * {
+  width: 100%;
+}
+
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.c1 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c3 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c3:hover,
+.c3:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c4 {
+  text-align: right;
+}
+
+<section
+  className="c0 c1 "
+>
+  <p
+    className="c2"
+  >
+    some title
+  </p>
+  <button
+    className="c3 c4"
+    onClick={[Function]}
+  >
+    <p
+      className="c2"
+    >
+      solved by @johntravolta
+    </p>
+  </button>
+  <section
+    className="c5 "
+  >
+    <button
+      className="c6 c7"
+      onClick={[Function]}
+    >
+      <p
+        className="c2"
+      >
+        see figma
+      </p>
+    </button>
+  </section>
+</section>
+`;
+
+exports[`Storyshots Organisms / Cards / Solution Card Mobile 1`] = `
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c7:focus-visible {
+  outline: none;
+}
+
+.c8 {
+  cursor: pointer;
+}
+
+.c8:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c6 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.c2 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.c2 > * {
+  width: 100%;
+}
+
+.c4 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c4:hover,
+.c4:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c5 {
+  text-align: right;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 c2 "
+  >
+    <p
+      className="c3"
+    >
+      some title
+    </p>
+    <button
+      className="c4 c5"
+      onClick={[Function]}
+    >
+      <p
+        className="c3"
+      >
+        solved by @johntravolta
+      </p>
+    </button>
+    <section
+      className="c6 "
+    >
+      <button
+        className="c7 c8"
+        onClick={[Function]}
+      >
+        <p
+          className="c3"
+        >
+          see figma
+        </p>
+      </button>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Organisms / Categories Selector Default 1`] = `
+.c2 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c1 {
+  border-radius: 2rem;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: .25rem .5rem;
+  border: 2px solid #101010;
+  color: #F0F0F0;
+  background-color: #101010;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.c0::-webkit-scrollbar {
+  display: none;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+    onClick={[Function]}
+    selected={true}
+  >
+    <p
+      className="c2"
+    >
+      wireframing
+    </p>
+  </button>
+  <button
+    className="c1"
+    onClick={[Function]}
+    selected={true}
+  >
+    <p
+      className="c2"
+    >
+      user personas
+    </p>
+  </button>
+  <button
+    className="c1"
+    onClick={[Function]}
+    selected={true}
+  >
+    <p
+      className="c2"
+    >
+      stories
+    </p>
+  </button>
+  <button
+    className="c1"
+    onClick={[Function]}
+    selected={true}
+  >
+    <p
+      className="c2"
+    >
+      mockups
+    </p>
+  </button>
+  <button
+    className="c1"
+    onClick={[Function]}
+    selected={true}
+  >
+    <p
+      className="c2"
+    >
+      some other long category
+    </p>
+  </button>
+  <button
+    className="c1"
+    onClick={[Function]}
+    selected={true}
+  >
+    <p
+      className="c2"
+    >
+      whats uppp
+    </p>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Organisms / Categories Selector Mobile 1`] = `
+.c3 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c2 {
+  border-radius: 2rem;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: .25rem .5rem;
+  border: 2px solid #101010;
+  color: #F0F0F0;
+  background-color: #101010;
 }
 
 .c1 {
@@ -271,17 +1899,9 @@ exports[`Storyshots Cards / ChallengeCard Default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: .5em;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-right: 1.5em;
-  overflow: scroll;
-}
-
-.c1 * {
-  white-space: nowrap;
+  gap: .5rem;
+  overflow-x: scroll;
+  width: 100%;
 }
 
 .c1::-webkit-scrollbar {
@@ -291,45 +1911,100 @@ exports[`Storyshots Cards / ChallengeCard Default 1`] = `
 <div
   className="c0"
 >
-  <img
-    alt="figma thumbnail"
-    src="http://picsum.photos/400"
-  />
-  <div>
-    <div
-      className="c1"
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      onClick={[Function]}
+      selected={true}
     >
-      <a
-        className="c2 small-text"
+      <p
+        className="c3"
       >
-        User Personas
-      </a>
-      <a
-        className="c2 small-text"
+        wireframing
+      </p>
+    </button>
+    <button
+      className="c2"
+      onClick={[Function]}
+      selected={true}
+    >
+      <p
+        className="c3"
       >
-        Stories
-      </a>
-      <a
-        className="c2 small-text"
+        user personas
+      </p>
+    </button>
+    <button
+      className="c2"
+      onClick={[Function]}
+      selected={true}
+    >
+      <p
+        className="c3"
       >
-        Wireframe
-      </a>
-    </div>
-    <p>
-      by 
-      <a
-        href="http://google.com"
+        stories
+      </p>
+    </button>
+    <button
+      className="c2"
+      onClick={[Function]}
+      selected={true}
+    >
+      <p
+        className="c3"
       >
-        @gerroo
-      </a>
-    </p>
+        mockups
+      </p>
+    </button>
+    <button
+      className="c2"
+      onClick={[Function]}
+      selected={true}
+    >
+      <p
+        className="c3"
+      >
+        some other long category
+      </p>
+    </button>
+    <button
+      className="c2"
+      onClick={[Function]}
+      selected={true}
+    >
+      <p
+        className="c3"
+      >
+        whats uppp
+      </p>
+    </button>
   </div>
 </div>
 `;
 
-exports[`Storyshots ChallengeCard Default 1`] = `
+exports[`Storyshots Organisms / Modal Default 1`] = `
+.c2 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .c0 {
-  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border: 1px solid #101010;
+  border-radius: .25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -337,20 +2012,2660 @@ exports[`Storyshots ChallengeCard Default 1`] = `
   -webkit-flex-flow: column;
   -ms-flex-flow: column;
   flex-flow: column;
-  max-width: 20rem;
-  border-radius: .5rem .5rem 0 0;
-  overflow: hidden;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 384px;
+  min-width: 240px;
+  background-color: #F0F0F0;
+  width: 50%;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c5:focus-visible {
+  outline: none;
+}
+
+.c6 {
+  cursor: pointer;
+}
+
+.c6:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c4 > * {
+  width: 100%;
+}
+
+<section
+  className="c0"
+>
+  <section
+    className="c1 "
+  >
+    <h3
+      className="c2"
+    >
+      connect your figma account
+    </h3>
+    <p
+      className="c3"
+    >
+       Figma is necessary for 
+              submitting solutions and creating challenges.
+            
+    </p>
+  </section>
+  <section
+    className="c4 "
+  >
+    <button
+      className="c5 c6"
+    >
+      <p
+        className="c3"
+      >
+        proceed to figma.com
+      </p>
+    </button>
+  </section>
+</section>
+`;
+
+exports[`Storyshots Organisms / Modal Mobile 1`] = `
+.c3 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c1 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border: 1px solid #101010;
+  border-radius: .25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 384px;
+  min-width: 240px;
+  background-color: #F0F0F0;
+  width: 50%;
+}
+
+.c2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c2 > * {
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  outline: none;
+}
+
+.c7 {
+  cursor: pointer;
+}
+
+.c7:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c5 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <section
+      className="c2 "
+    >
+      <h3
+        className="c3"
+      >
+        connect your figma account
+      </h3>
+      <p
+        className="c4"
+      >
+         Figma is necessary for 
+              submitting solutions and creating challenges.
+            
+      </p>
+    </section>
+    <section
+      className="c5 "
+    >
+      <button
+        className="c6 c7"
+      >
+        <p
+          className="c4"
+        >
+          proceed to figma.com
+        </p>
+      </button>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Organisms / Modal Some State 1`] = `
+.c2 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c0 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border: 1px solid #101010;
+  border-radius: .25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 384px;
+  min-width: 240px;
+  background-color: #F0F0F0;
+  width: 50%;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c5:focus-visible {
+  outline: none;
+}
+
+.c6 {
+  cursor: pointer;
+}
+
+.c6:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c4 > * {
+  width: 100%;
+}
+
+<section
+  className="c0"
+>
+  <section
+    className="c1 "
+  >
+    <h3
+      className="c2"
+    >
+      connect your figma account
+    </h3>
+    <p
+      className="c3"
+    >
+       Figma is necessary for 
+              submitting solutions and creating challenges.
+            
+    </p>
+  </section>
+  <section
+    className="c4 "
+  >
+    <button
+      className="c5 c6"
+    >
+      <p
+        className="c3"
+      >
+        proceed to figma.com
+      </p>
+    </button>
+  </section>
+</section>
+`;
+
+exports[`Storyshots Organisms / Socials List Default 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 {
+  width: auto;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+<section
+  className="c0 c1"
+>
+  no socials found :(
+</section>
+`;
+
+exports[`Storyshots Organisms / Socials List Mobile 1`] = `
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c2 {
+  width: auto;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 c2"
+  >
+    no socials found :(
+  </section>
+</div>
+`;
+
+exports[`Storyshots Pages / About Default 1`] = `
+.c1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c5 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c9 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c7:focus-visible {
+  outline: none;
+}
+
+.c8 {
+  cursor: pointer;
+}
+
+.c8:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c6 > * {
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 2rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.c2 {
+  width: 100%;
+}
+
+@media screen and (max-width:600px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+<section
+  className="c0"
+>
+  <h1
+    className="c1 c2"
+  >
+    about
+  </h1>
+  <section
+    className="c3"
+  >
+    <p
+      className="c4"
+    >
+      hello 👋,
+    </p>
+    <p
+      className="c4"
+    >
+      I’m Eren, the designer and developer of practice.design. I’m a grade 11 student from Ottawa, Canada.
+    </p>
+    <p
+      className="c4"
+    >
+      In the following paragraphs I’ll talk a little bit about practice.design, my personal design & development philosophy and the future of practice.design.
+    </p>
+    <h3
+      className="c5"
+    >
+      practice.design’s story
+    </h3>
+    <p
+      className="c4"
+    >
+      I came up with this idea of challenge-based training for design while I was trying to learn ux / ui design through a book.
+    </p>
+    <p
+      className="c4"
+    >
+      You see, I learned programming mostly through practice / problem solving (on platforms like codingame or frontendmentor). I find this type of structured practice much more enjoyable than more passive forms of learning like taking a course or reading a book without applying your newfound knowledge.
+    </p>
+    <p
+      className="c4"
+    >
+      I could not find a reliable source of educational design challenges so I built one.
+    </p>
+    <h3
+      className="c5"
+    >
+      design and development
+    </h3>
+    <p
+      className="c4"
+    >
+      I love programming and ux / ui design, but I’m not a professional. I built this in my bedroom, not a corporate office and just by myself, which means I might have some really wrong views. Please point these out to me. I’d love to improve.
+    </p>
+    <p
+      className="c4"
+    >
+      I believe that a purpose of ux design is to bridge the gap between the users and the creators of a system. That’s why I have user personas, and most ux processes I found include some sort of empathizing step.
+    </p>
+    <p
+      className="c4"
+    >
+      During my design process I like doing some user interviews. These interviews help me emphatize with you, the user. They usually go for about 10 - 15 minutes and are pretty fun.
+    </p>
+    <section
+      className="c6 "
+    >
+      <button
+        className="c7 c8"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          👏 sign up for user interviews 👏
+        </p>
+      </button>
+      <p
+        className="c9"
+      >
+        You can always sign up for user interviews in the settings page 🤝
+      </p>
+    </section>
+    <p
+      className="c4"
+    >
+      In order to truly bridge the gap though, not only do I need to understand you, the user, but some of you also need to understand me. I want to design this thing with you.
+    </p>
+    <p
+      className="c4"
+    >
+      I believe true understanding comes from open and honest communication. That’s why I have all of my design documents (which are a google doc and a figma lol) openly shared below. Both of these are in suggestion mode, so you can go ahead and make any change on the doc, or write a comment on figma and I will try to implement it or at least like consider it.
+    </p>
+    <section
+      className="c6 "
+    >
+      <button
+        className="c7 c8"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          google doc
+        </p>
+      </button>
+    </section>
+    <section
+      className="c6 "
+    >
+      <button
+        className="c7 c8"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          figma
+        </p>
+      </button>
+    </section>
+  </section>
+</section>
+`;
+
+exports[`Storyshots Pages / About Mobile 1`] = `
+.c2 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c6 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c5 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c10 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c8:focus-visible {
+  outline: none;
+}
+
+.c9 {
+  cursor: pointer;
+}
+
+.c9:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c7 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 2rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.c3 {
+  width: 100%;
+}
+
+@media screen and (max-width:600px) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <h1
+      className="c2 c3"
+    >
+      about
+    </h1>
+    <section
+      className="c4"
+    >
+      <p
+        className="c5"
+      >
+        hello 👋,
+      </p>
+      <p
+        className="c5"
+      >
+        I’m Eren, the designer and developer of practice.design. I’m a grade 11 student from Ottawa, Canada.
+      </p>
+      <p
+        className="c5"
+      >
+        In the following paragraphs I’ll talk a little bit about practice.design, my personal design & development philosophy and the future of practice.design.
+      </p>
+      <h3
+        className="c6"
+      >
+        practice.design’s story
+      </h3>
+      <p
+        className="c5"
+      >
+        I came up with this idea of challenge-based training for design while I was trying to learn ux / ui design through a book.
+      </p>
+      <p
+        className="c5"
+      >
+        You see, I learned programming mostly through practice / problem solving (on platforms like codingame or frontendmentor). I find this type of structured practice much more enjoyable than more passive forms of learning like taking a course or reading a book without applying your newfound knowledge.
+      </p>
+      <p
+        className="c5"
+      >
+        I could not find a reliable source of educational design challenges so I built one.
+      </p>
+      <h3
+        className="c6"
+      >
+        design and development
+      </h3>
+      <p
+        className="c5"
+      >
+        I love programming and ux / ui design, but I’m not a professional. I built this in my bedroom, not a corporate office and just by myself, which means I might have some really wrong views. Please point these out to me. I’d love to improve.
+      </p>
+      <p
+        className="c5"
+      >
+        I believe that a purpose of ux design is to bridge the gap between the users and the creators of a system. That’s why I have user personas, and most ux processes I found include some sort of empathizing step.
+      </p>
+      <p
+        className="c5"
+      >
+        During my design process I like doing some user interviews. These interviews help me emphatize with you, the user. They usually go for about 10 - 15 minutes and are pretty fun.
+      </p>
+      <section
+        className="c7 "
+      >
+        <button
+          className="c8 c9"
+          onClick={[Function]}
+        >
+          <p
+            className="c5"
+          >
+            👏 sign up for user interviews 👏
+          </p>
+        </button>
+        <p
+          className="c10"
+        >
+          You can always sign up for user interviews in the settings page 🤝
+        </p>
+      </section>
+      <p
+        className="c5"
+      >
+        In order to truly bridge the gap though, not only do I need to understand you, the user, but some of you also need to understand me. I want to design this thing with you.
+      </p>
+      <p
+        className="c5"
+      >
+        I believe true understanding comes from open and honest communication. That’s why I have all of my design documents (which are a google doc and a figma lol) openly shared below. Both of these are in suggestion mode, so you can go ahead and make any change on the doc, or write a comment on figma and I will try to implement it or at least like consider it.
+      </p>
+      <section
+        className="c7 "
+      >
+        <button
+          className="c8 c9"
+          onClick={[Function]}
+        >
+          <p
+            className="c5"
+          >
+            google doc
+          </p>
+        </button>
+      </section>
+      <section
+        className="c7 "
+      >
+        <button
+          className="c8 c9"
+          onClick={[Function]}
+        >
+          <p
+            className="c5"
+          >
+            figma
+          </p>
+        </button>
+      </section>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Pages / Create Challenge Default 1`] = `
+.c1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c9 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c4 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c5 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c5:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c7:focus-visible {
+  outline: none;
+}
+
+.c8 {
+  cursor: pointer;
+}
+
+.c8:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c6 > * {
+  width: 100%;
+}
+
+.c2 {
   gap: 1rem;
-  -webkit-filter: drop-shadow(2px 4px 8px rgba(16,16,16,0.05));
-  filter: drop-shadow(2px 4px 8px rgba(16,16,16,0.05));
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
 }
 
-.c0 img {
-  height: 220px;
-  object-fit: cover;
+.c0 {
+  width: 50%;
+  margin: auto;
 }
 
-.c0 > div {
+<section
+  className="c0"
+>
+  <h1
+    className="c1"
+  >
+    create a challenge
+  </h1>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        title
+      </p>
+      <input
+        autoComplete="title"
+        className="c5"
+        onChange={[Function]}
+        placeholder="title"
+        value=""
+      />
+      <p
+        className="c4"
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        figma community url
+      </p>
+      <input
+        autoComplete="figma community url"
+        className="c5"
+        onChange={[Function]}
+        placeholder="figma community url"
+        value=""
+      />
+      <p
+        className="c4"
+      />
+    </div>
+    <section
+      className="c6 "
+    >
+      <button
+        className="c7 c8"
+        onClick={[Function]}
+      >
+        <p
+          className="c9"
+        >
+          create
+        </p>
+      </button>
+    </section>
+    
+  </div>
+</section>
+`;
+
+exports[`Storyshots Pages / Create Challenge Mobile 1`] = `
+.c2 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c10 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c5 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c6 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c8:focus-visible {
+  outline: none;
+}
+
+.c9 {
+  cursor: pointer;
+}
+
+.c9:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c7 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c3 {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+.c1 {
+  width: 50%;
+  margin: auto;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      create a challenge
+    </h1>
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          title
+        </p>
+        <input
+          autoComplete="title"
+          className="c6"
+          onChange={[Function]}
+          placeholder="title"
+          value=""
+        />
+        <p
+          className="c5"
+        />
+      </div>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          figma community url
+        </p>
+        <input
+          autoComplete="figma community url"
+          className="c6"
+          onChange={[Function]}
+          placeholder="figma community url"
+          value=""
+        />
+        <p
+          className="c5"
+        />
+      </div>
+      <section
+        className="c7 "
+      >
+        <button
+          className="c8 c9"
+          onClick={[Function]}
+        >
+          <p
+            className="c10"
+          >
+            create
+          </p>
+        </button>
+      </section>
+      
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Pages / Create Challenge Some State 1`] = `
+.c1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c9 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c4 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c5 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c5:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c7:focus-visible {
+  outline: none;
+}
+
+.c8 {
+  cursor: pointer;
+}
+
+.c8:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c6 > * {
+  width: 100%;
+}
+
+.c2 {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+.c0 {
+  width: 50%;
+  margin: auto;
+}
+
+<section
+  className="c0"
+>
+  <h1
+    className="c1"
+  >
+    create a challenge
+  </h1>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        title
+      </p>
+      <input
+        autoComplete="title"
+        className="c5"
+        onChange={[Function]}
+        placeholder="title"
+        value=""
+      />
+      <p
+        className="c4"
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        figma community url
+      </p>
+      <input
+        autoComplete="figma community url"
+        className="c5"
+        onChange={[Function]}
+        placeholder="figma community url"
+        value=""
+      />
+      <p
+        className="c4"
+      />
+    </div>
+    <section
+      className="c6 "
+    >
+      <button
+        className="c7 c8"
+        onClick={[Function]}
+      >
+        <p
+          className="c9"
+        >
+          create
+        </p>
+      </button>
+    </section>
+    
+  </div>
+</section>
+`;
+
+exports[`Storyshots Pages / Home Default 1`] = `
+.c3 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c9 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c14 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c5 {
+  font-weight: 800;
+}
+
+.c8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c8 > * {
+  width: 100%;
+}
+
+.c15 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c15:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c17:focus-visible {
+  outline: none;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c19:focus-visible {
+  outline: none;
+}
+
+.c18 {
+  cursor: pointer;
+}
+
+.c18:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c16 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c16 > * {
+  width: 100%;
+}
+
+.c6 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c6:hover,
+.c6:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+  width: 100%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 2rem;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c1 > *:not(.c2) {
+  width: 33%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+}
+
+.c1 > *:not(.c2) button p {
+  white-space: normal;
+  text-align: left;
+}
+
+.c1 .c2 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  row-gap: 1rem;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.c7 > * {
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  width: 33%;
+  min-width: 200px;
+}
+
+.c10 {
+  width: 33%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 8rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width:600px) {
+  .c1 > *:not(.c2) {
+    -webkit-flex: 1 0;
+    -ms-flex: 1 0;
+    flex: 1 0;
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .c10 {
+    width: 100%;
+  }
+}
+
+<section
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <h1
+      className="c2 c3"
+    >
+      practice ui & ux design
+    </h1>
+    <div
+      className=""
+    >
+      <p
+        className="c4"
+      >
+        <span
+          className="c5"
+        >
+          practice.design
+        </span>
+         is a free, challenge-based training platform for ui & ux design.
+      </p>
+      <button
+        className="c6"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          Read more about how I got the idea and my philosophy.
+        </p>
+      </button>
+    </div>
+  </section>
+  <section
+    className="c7"
+  >
+    <section
+      className="c8 "
+    >
+      <h3
+        className="c9"
+      >
+        design challenges
+      </h3>
+      <p
+        className="c4"
+      >
+         Educational design problems waiting to be solved by you. 
+              You can create them too!
+      </p>
+    </section>
+    <section
+      className="c8 "
+    >
+      <h3
+        className="c9"
+      >
+        playbooks
+      </h3>
+      <p
+        className="c4"
+      >
+         Lists of learning resources by topic, so you won’t have to google.
+              Everyone can suggest new resources. *work in progress 🚧
+            
+      </p>
+    </section>
+    <section
+      className="c8 "
+    >
+      <h3
+        className="c9"
+      >
+        community
+      </h3>
+      <p
+        className="c4"
+      >
+         DMs and a chat room. Because at times I want someone other 
+              than my cat to critique my designs. *work in progress 🚧
+            
+      </p>
+    </section>
+  </section>
+  <section
+    className="c10"
+  >
+    <section
+      className="c11"
+    >
+      <h1
+        className="c2 c3"
+      >
+        sign up
+      </h1>
+      <section
+        className="c12"
+      >
+        <div
+          className="c13"
+        >
+          <p
+            className="c14"
+          >
+            username
+          </p>
+          <input
+            autoComplete="username"
+            className="c15"
+            onChange={[Function]}
+            placeholder="username"
+            value=""
+          />
+          <p
+            className="c14"
+          >
+            
+          </p>
+        </div>
+        <div
+          className="c13"
+        >
+          <p
+            className="c14"
+          >
+            email
+          </p>
+          <input
+            autoComplete="email"
+            className="c15"
+            onChange={[Function]}
+            placeholder="email"
+            value=""
+          />
+          <p
+            className="c14"
+          >
+            
+          </p>
+        </div>
+        <div
+          className="c13"
+        >
+          <p
+            className="c14"
+          >
+            pass
+          </p>
+          <input
+            autoComplete="pass"
+            className="c15"
+            onChange={[Function]}
+            placeholder="pass"
+            type="password"
+            value=""
+          />
+          <p
+            className="c14"
+          >
+            
+          </p>
+        </div>
+      </section>
+      <section
+        className="c16 "
+      >
+        <button
+          className="c17 c18"
+          onClick={[Function]}
+        >
+          <p
+            className="c4"
+          >
+            create account
+          </p>
+        </button>
+        
+      </section>
+      <section
+        className="c16 "
+      >
+        <button
+          className="c19 c18"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="google_logo.svg"
+          />
+           
+          <p
+            className="c4"
+          >
+            login with google
+          </p>
+           
+          <img
+            alt=""
+            src="google_logo.svg"
+          />
+        </button>
+        
+      </section>
+      <button
+        className="c6"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          I already have an account
+        </p>
+      </button>
+      
+    </section>
+  </section>
+</section>
+`;
+
+exports[`Storyshots Pages / Home Mobile 1`] = `
+.c4 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c10 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c5 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c15 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c6 {
+  font-weight: 800;
+}
+
+.c9 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c9 > * {
+  width: 100%;
+}
+
+.c16 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c16:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c18:focus-visible {
+  outline: none;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c20:focus-visible {
+  outline: none;
+}
+
+.c19 {
+  cursor: pointer;
+}
+
+.c19:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c17 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c17 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c7 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c7:hover,
+.c7:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+  width: 100%;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 2rem;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c2 > *:not(.c3) {
+  width: 33%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+}
+
+.c2 > *:not(.c3) button p {
+  white-space: normal;
+  text-align: left;
+}
+
+.c2 .c3 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  row-gap: 1rem;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.c8 > * {
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  width: 33%;
+  min-width: 200px;
+}
+
+.c11 {
+  width: 33%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 8rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width:600px) {
+  .c2 > *:not(.c3) {
+    -webkit-flex: 1 0;
+    -ms-flex: 1 0;
+    flex: 1 0;
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .c11 {
+    width: 100%;
+  }
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <section
+      className="c2"
+    >
+      <h1
+        className="c3 c4"
+      >
+        practice ui & ux design
+      </h1>
+      <div
+        className=""
+      >
+        <p
+          className="c5"
+        >
+          <span
+            className="c6"
+          >
+            practice.design
+          </span>
+           is a free, challenge-based training platform for ui & ux design.
+        </p>
+        <button
+          className="c7"
+          onClick={[Function]}
+        >
+          <p
+            className="c5"
+          >
+            Read more about how I got the idea and my philosophy.
+          </p>
+        </button>
+      </div>
+    </section>
+    <section
+      className="c8"
+    >
+      <section
+        className="c9 "
+      >
+        <h3
+          className="c10"
+        >
+          design challenges
+        </h3>
+        <p
+          className="c5"
+        >
+           Educational design problems waiting to be solved by you. 
+              You can create them too!
+        </p>
+      </section>
+      <section
+        className="c9 "
+      >
+        <h3
+          className="c10"
+        >
+          playbooks
+        </h3>
+        <p
+          className="c5"
+        >
+           Lists of learning resources by topic, so you won’t have to google.
+              Everyone can suggest new resources. *work in progress 🚧
+            
+        </p>
+      </section>
+      <section
+        className="c9 "
+      >
+        <h3
+          className="c10"
+        >
+          community
+        </h3>
+        <p
+          className="c5"
+        >
+           DMs and a chat room. Because at times I want someone other 
+              than my cat to critique my designs. *work in progress 🚧
+            
+        </p>
+      </section>
+    </section>
+    <section
+      className="c11"
+    >
+      <section
+        className="c12"
+      >
+        <h1
+          className="c3 c4"
+        >
+          sign up
+        </h1>
+        <section
+          className="c13"
+        >
+          <div
+            className="c14"
+          >
+            <p
+              className="c15"
+            >
+              username
+            </p>
+            <input
+              autoComplete="username"
+              className="c16"
+              onChange={[Function]}
+              placeholder="username"
+              value=""
+            />
+            <p
+              className="c15"
+            >
+              
+            </p>
+          </div>
+          <div
+            className="c14"
+          >
+            <p
+              className="c15"
+            >
+              email
+            </p>
+            <input
+              autoComplete="email"
+              className="c16"
+              onChange={[Function]}
+              placeholder="email"
+              value=""
+            />
+            <p
+              className="c15"
+            >
+              
+            </p>
+          </div>
+          <div
+            className="c14"
+          >
+            <p
+              className="c15"
+            >
+              pass
+            </p>
+            <input
+              autoComplete="pass"
+              className="c16"
+              onChange={[Function]}
+              placeholder="pass"
+              type="password"
+              value=""
+            />
+            <p
+              className="c15"
+            >
+              
+            </p>
+          </div>
+        </section>
+        <section
+          className="c17 "
+        >
+          <button
+            className="c18 c19"
+            onClick={[Function]}
+          >
+            <p
+              className="c5"
+            >
+              create account
+            </p>
+          </button>
+          
+        </section>
+        <section
+          className="c17 "
+        >
+          <button
+            className="c20 c19"
+            onClick={[Function]}
+          >
+            <img
+              alt=""
+              src="google_logo.svg"
+            />
+             
+            <p
+              className="c5"
+            >
+              login with google
+            </p>
+             
+            <img
+              alt=""
+              src="google_logo.svg"
+            />
+          </button>
+          
+        </section>
+        <button
+          className="c7"
+          onClick={[Function]}
+        >
+          <p
+            className="c5"
+          >
+            I already have an account
+          </p>
+        </button>
+        
+      </section>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Pages / Login Default 1`] = `
+.c2 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c10 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c5 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c6 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c8:focus-visible {
+  outline: none;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c11:focus-visible {
+  outline: none;
+}
+
+.c9 {
+  cursor: pointer;
+}
+
+.c9:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c7 > * {
+  width: 100%;
+}
+
+.c13 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c13:hover,
+.c13:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -361,50 +4676,2337 @@ exports[`Storyshots ChallengeCard Default 1`] = `
   justify-content: space-between;
 }
 
-.c0 a {
-  color: #101010;
+.c0 {
+  width: 33.3333%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:600px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<section
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      login
+    </h1>
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          email
+        </p>
+        <input
+          autoComplete="email"
+          className="c6"
+          onChange={[Function]}
+          placeholder="email"
+          value=""
+        />
+        <p
+          className="c5"
+        />
+      </div>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          password
+        </p>
+        <input
+          autoComplete="password"
+          className="c6"
+          onChange={[Function]}
+          placeholder="password"
+          type="password"
+          value=""
+        />
+        <p
+          className="c5"
+        />
+      </div>
+    </div>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          login
+        </p>
+      </button>
+    </section>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c11 c9"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+         
+        <p
+          className="c10"
+        >
+          login with google
+        </p>
+         
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+      </button>
+    </section>
+    <div
+      className="c12"
+    >
+      <button
+        className="c13"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          sign up instead
+        </p>
+      </button>
+      <button
+        className="c13"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          forgot password
+        </p>
+      </button>
+    </div>
+    
+  </section>
+</section>
+`;
+
+exports[`Storyshots Pages / Login Mobile 1`] = `
+.c3 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c11 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c6 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c7 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c7:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c9:focus-visible {
+  outline: none;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c12:focus-visible {
+  outline: none;
+}
+
+.c10 {
+  cursor: pointer;
+}
+
+.c10:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c8 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c14 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c14:hover,
+.c14:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c1 {
-  background-color: #101010;
-  color: #F0F0F0;
+  width: 33.3333%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:600px) {
+  .c1 {
+    width: 100%;
+  }
 }
 
 <div
   className="c0"
 >
-  <img
-    alt="figma thumbnail"
-  />
-  <div>
-    <a
-      className="c1"
+  <section
+    className="c1"
+  >
+    <section
+      className="c2"
     >
-      User Personas
-    </a>
-    <a
-      className="c1"
-    >
-      Stories
-    </a>
-    <a
-      className="c1"
-    >
-      Wireframe
-    </a>
-    <p>
-      challenge by 
-      <a
-        className="small-text"
+      <h1
+        className="c3"
       >
-        @gerroo
-      </a>
+        login
+      </h1>
+      <div
+        className="c4"
+      >
+        <div
+          className="c5"
+        >
+          <p
+            className="c6"
+          >
+            email
+          </p>
+          <input
+            autoComplete="email"
+            className="c7"
+            onChange={[Function]}
+            placeholder="email"
+            value=""
+          />
+          <p
+            className="c6"
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <p
+            className="c6"
+          >
+            password
+          </p>
+          <input
+            autoComplete="password"
+            className="c7"
+            onChange={[Function]}
+            placeholder="password"
+            type="password"
+            value=""
+          />
+          <p
+            className="c6"
+          />
+        </div>
+      </div>
+      <section
+        className="c8 "
+      >
+        <button
+          className="c9 c10"
+          onClick={[Function]}
+        >
+          <p
+            className="c11"
+          >
+            login
+          </p>
+        </button>
+      </section>
+      <section
+        className="c8 "
+      >
+        <button
+          className="c12 c10"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="google_logo.svg"
+          />
+           
+          <p
+            className="c11"
+          >
+            login with google
+          </p>
+           
+          <img
+            alt=""
+            src="google_logo.svg"
+          />
+        </button>
+      </section>
+      <div
+        className="c13"
+      >
+        <button
+          className="c14"
+          onClick={[Function]}
+        >
+          <p
+            className="c11"
+          >
+            sign up instead
+          </p>
+        </button>
+        <button
+          className="c14"
+          onClick={[Function]}
+        >
+          <p
+            className="c11"
+          >
+            forgot password
+          </p>
+        </button>
+      </div>
+      
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Pages / Login Some State 1`] = `
+.c2 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c10 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c5 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c6 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c8:focus-visible {
+  outline: none;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c11:focus-visible {
+  outline: none;
+}
+
+.c9 {
+  cursor: pointer;
+}
+
+.c9:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c7 > * {
+  width: 100%;
+}
+
+.c13 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c13:hover,
+.c13:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c0 {
+  width: 33.3333%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:600px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<section
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      login
+    </h1>
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          email
+        </p>
+        <input
+          autoComplete="email"
+          className="c6"
+          onChange={[Function]}
+          placeholder="email"
+          value=""
+        />
+        <p
+          className="c5"
+        />
+      </div>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          password
+        </p>
+        <input
+          autoComplete="password"
+          className="c6"
+          onChange={[Function]}
+          placeholder="password"
+          type="password"
+          value=""
+        />
+        <p
+          className="c5"
+        />
+      </div>
+    </div>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          login
+        </p>
+      </button>
+    </section>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c11 c9"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+         
+        <p
+          className="c10"
+        >
+          login with google
+        </p>
+         
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+      </button>
+    </section>
+    <div
+      className="c12"
+    >
+      <button
+        className="c13"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          sign up instead
+        </p>
+      </button>
+      <button
+        className="c13"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          forgot password
+        </p>
+      </button>
+    </div>
+    
+  </section>
+</section>
+`;
+
+exports[`Storyshots Pages / My Challenges Default 1`] = `
+.c1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c2 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 8rem;
+}
+
+.c0 > div {
+  row-gap: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+<section
+  className="c0"
+>
+  <h1
+    className="c1"
+  >
+    my challenges
+  </h1>
+  <div />
+  <div>
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <p
+        className="c3"
+      >
+        + create a challenge
+      </p>
+    </button>
+  </div>
+</section>
+`;
+
+exports[`Storyshots Pages / My Challenges Mobile 1`] = `
+.c2 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c3 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c3:hover,
+.c3:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 8rem;
+}
+
+.c1 > div {
+  row-gap: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      my challenges
+    </h1>
+    <div />
+    <div>
+      <button
+        className="c3"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          + create a challenge
+        </p>
+      </button>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Pages / My Challenges Some State 1`] = `
+.c1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c2 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 8rem;
+}
+
+.c0 > div {
+  row-gap: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+<section
+  className="c0"
+>
+  <h1
+    className="c1"
+  >
+    my challenges
+  </h1>
+  <div />
+  <div>
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <p
+        className="c3"
+      >
+        + create a challenge
+      </p>
+    </button>
+  </div>
+</section>
+`;
+
+exports[`Storyshots Pages / Profile Default 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.c1 {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<section
+  className="c0 c1"
+/>
+`;
+
+exports[`Storyshots Pages / Profile Mobile 1`] = `
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+}
+
+.c2 {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1 c2"
+  />
+</div>
+`;
+
+exports[`Storyshots Pages / Settings Default 1`] = `null`;
+
+exports[`Storyshots Pages / Settings Mobile 1`] = `
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Storyshots Pages / Signup Default 1`] = `
+.c2 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c10 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c5 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c6 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c8:focus-visible {
+  outline: none;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c11:focus-visible {
+  outline: none;
+}
+
+.c9 {
+  cursor: pointer;
+}
+
+.c9:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c7 > * {
+  width: 100%;
+}
+
+.c12 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c12:hover,
+.c12:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+  width: 100%;
+}
+
+.c0 {
+  width: 33.3333%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:600px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<section
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      sign up
+    </h1>
+    <section
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          username
+        </p>
+        <input
+          autoComplete="username"
+          className="c6"
+          onChange={[Function]}
+          placeholder="username"
+          value=""
+        />
+        <p
+          className="c5"
+        >
+          
+        </p>
+      </div>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          email
+        </p>
+        <input
+          autoComplete="email"
+          className="c6"
+          onChange={[Function]}
+          placeholder="email"
+          value=""
+        />
+        <p
+          className="c5"
+        >
+          
+        </p>
+      </div>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          pass
+        </p>
+        <input
+          autoComplete="pass"
+          className="c6"
+          onChange={[Function]}
+          placeholder="pass"
+          type="password"
+          value=""
+        />
+        <p
+          className="c5"
+        >
+          
+        </p>
+      </div>
+    </section>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          create account
+        </p>
+      </button>
+      
+    </section>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c11 c9"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+         
+        <p
+          className="c10"
+        >
+          login with google
+        </p>
+         
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+      </button>
+      
+    </section>
+    <button
+      className="c12"
+      onClick={[Function]}
+    >
+      <p
+        className="c10"
+      >
+        I already have an account
+      </p>
+    </button>
+    
+  </section>
+</section>
+`;
+
+exports[`Storyshots Pages / Signup Mobile 1`] = `
+.c3 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c11 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c6 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c7 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c7:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c9:focus-visible {
+  outline: none;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c12:focus-visible {
+  outline: none;
+}
+
+.c10 {
+  cursor: pointer;
+}
+
+.c10:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c8 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c13 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c13:hover,
+.c13:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+  width: 100%;
+}
+
+.c1 {
+  width: 33.3333%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:600px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <section
+      className="c2"
+    >
+      <h1
+        className="c3"
+      >
+        sign up
+      </h1>
+      <section
+        className="c4"
+      >
+        <div
+          className="c5"
+        >
+          <p
+            className="c6"
+          >
+            username
+          </p>
+          <input
+            autoComplete="username"
+            className="c7"
+            onChange={[Function]}
+            placeholder="username"
+            value=""
+          />
+          <p
+            className="c6"
+          >
+            
+          </p>
+        </div>
+        <div
+          className="c5"
+        >
+          <p
+            className="c6"
+          >
+            email
+          </p>
+          <input
+            autoComplete="email"
+            className="c7"
+            onChange={[Function]}
+            placeholder="email"
+            value=""
+          />
+          <p
+            className="c6"
+          >
+            
+          </p>
+        </div>
+        <div
+          className="c5"
+        >
+          <p
+            className="c6"
+          >
+            pass
+          </p>
+          <input
+            autoComplete="pass"
+            className="c7"
+            onChange={[Function]}
+            placeholder="pass"
+            type="password"
+            value=""
+          />
+          <p
+            className="c6"
+          >
+            
+          </p>
+        </div>
+      </section>
+      <section
+        className="c8 "
+      >
+        <button
+          className="c9 c10"
+          onClick={[Function]}
+        >
+          <p
+            className="c11"
+          >
+            create account
+          </p>
+        </button>
+        
+      </section>
+      <section
+        className="c8 "
+      >
+        <button
+          className="c12 c10"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="google_logo.svg"
+          />
+           
+          <p
+            className="c11"
+          >
+            login with google
+          </p>
+           
+          <img
+            alt=""
+            src="google_logo.svg"
+          />
+        </button>
+        
+      </section>
+      <button
+        className="c13"
+        onClick={[Function]}
+      >
+        <p
+          className="c11"
+        >
+          I already have an account
+        </p>
+      </button>
+      
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Pages / Submit Solution Default 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+<section>
+  <p
+    className="c0"
+  >
+    challenge is not found :((
+  </p>
+</section>
+`;
+
+exports[`Storyshots Pages / Submit Solution Mobile 1`] = `
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+<div
+  className="c0"
+>
+  <section>
+    <p
+      className="c1"
+    >
+      challenge is not found :((
     </p>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Sections / Card Grid Default 1`] = `
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c8:focus-visible {
+  outline: none;
+}
+
+.c9 {
+  cursor: pointer;
+}
+
+.c9:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c7 > * {
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.c3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.c3 > * {
+  width: 100%;
+}
+
+.c5 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c5:hover,
+.c5:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c6 {
+  text-align: right;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 2rem;
+}
+
+.c0 .c2 {
+  -webkit-flex: 1 0 250px;
+  -ms-flex: 1 0 250px;
+  flex: 1 0 250px;
+}
+
+<section
+  className="c0"
+>
+  <section
+    className="c1 c2 c3 "
+  >
+    <p
+      className="c4"
+    >
+      challenge title
+    </p>
+    <button
+      className="c5 c6"
+      onClick={[Function]}
+    >
+      <p
+        className="c4"
+      >
+        by @johnny
+      </p>
+    </button>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          accept the challenge
+        </p>
+      </button>
+    </section>
+  </section>
+  <section
+    className="c1 c2 c3 "
+  >
+    <p
+      className="c4"
+    >
+      challenge title
+    </p>
+    <button
+      className="c5 c6"
+      onClick={[Function]}
+    >
+      <p
+        className="c4"
+      >
+        by @johnny
+      </p>
+    </button>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          accept the challenge
+        </p>
+      </button>
+    </section>
+  </section>
+  <section
+    className="c1 c2 c3 "
+  >
+    <p
+      className="c4"
+    >
+      challenge title
+    </p>
+    <button
+      className="c5 c6"
+      onClick={[Function]}
+    >
+      <p
+        className="c4"
+      >
+        by @johnny
+      </p>
+    </button>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          accept the challenge
+        </p>
+      </button>
+    </section>
+  </section>
+  <section
+    className="c1 c2 c3 "
+  >
+    <p
+      className="c4"
+    >
+      challenge title
+    </p>
+    <button
+      className="c5 c6"
+      onClick={[Function]}
+    >
+      <p
+        className="c4"
+      >
+        by @johnny
+      </p>
+    </button>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          accept the challenge
+        </p>
+      </button>
+    </section>
+  </section>
+  <section
+    className="c1 c2 c3 "
+  >
+    <p
+      className="c4"
+    >
+      challenge title
+    </p>
+    <button
+      className="c5 c6"
+      onClick={[Function]}
+    >
+      <p
+        className="c4"
+      >
+        by @johnny
+      </p>
+    </button>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          accept the challenge
+        </p>
+      </button>
+    </section>
+  </section>
+</section>
+`;
+
+exports[`Storyshots Sections / Card Grid Mobile 1`] = `
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 2rem;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  />
+</div>
+`;
+
+exports[`Storyshots Sections / Create Challenge Form Default 1`] = `
+.c7 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c2 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c3 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c3:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c5:focus-visible {
+  outline: none;
+}
+
+.c6 {
+  cursor: pointer;
+}
+
+.c6:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c4 > * {
+  width: 100%;
+}
+
+.c0 {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      title
+    </p>
+    <input
+      autoComplete="title"
+      className="c3"
+      onChange={[Function]}
+      placeholder="title"
+      value=""
+    />
+    <p
+      className="c2"
+    />
+  </div>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      figma community url
+    </p>
+    <input
+      autoComplete="figma community url"
+      className="c3"
+      onChange={[Function]}
+      placeholder="figma community url"
+      value=""
+    />
+    <p
+      className="c2"
+    />
+  </div>
+  <section
+    className="c4 "
+  >
+    <button
+      className="c5 c6"
+      onClick={[Function]}
+    >
+      <p
+        className="c7"
+      >
+        create
+      </p>
+    </button>
+  </section>
+  
+</div>
+`;
+
+exports[`Storyshots Sections / Create Challenge Form Mobile 1`] = `
+.c8 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c3 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c4 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c4:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  outline: none;
+}
+
+.c7 {
+  cursor: pointer;
+}
+
+.c7:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c5 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <p
+        className="c3"
+      >
+        title
+      </p>
+      <input
+        autoComplete="title"
+        className="c4"
+        onChange={[Function]}
+        placeholder="title"
+        value=""
+      />
+      <p
+        className="c3"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <p
+        className="c3"
+      >
+        figma community url
+      </p>
+      <input
+        autoComplete="figma community url"
+        className="c4"
+        onChange={[Function]}
+        placeholder="figma community url"
+        value=""
+      />
+      <p
+        className="c3"
+      />
+    </div>
+    <section
+      className="c5 "
+    >
+      <button
+        className="c6 c7"
+        onClick={[Function]}
+      >
+        <p
+          className="c8"
+        >
+          create
+        </p>
+      </button>
+    </section>
+    
   </div>
 </div>
 `;
 
-exports[`Storyshots Footer Default 1`] = `
+exports[`Storyshots Sections / Footer Default 1`] = `
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .c0 {
   width: 100%;
   display: -webkit-box;
@@ -424,28 +7026,31 @@ exports[`Storyshots Footer Default 1`] = `
   color: #F0F0F0;
 }
 
-.c0 a {
+.c2 {
   color: #F0F0F0;
-  -webkit-transition: -webkit-transform 300ms ease-in;
-  -webkit-transition: transform 300ms ease-in;
-  transition: transform 300ms ease-in;
+  -webkit-transition: color 150ms ease-in;
+  transition: color 150ms ease-in;
 }
 
-.c0 a:hover,
-.c0 a:active {
-  display: inline-block;
+.c2:hover,
+.c2:active {
   color: red;
 }
 
 <section
   className="c0"
 >
-  <p>
+  <p
+    className="c1"
+  >
     practice.design
   </p>
-  <p>
+  <p
+    className="c1"
+  >
     made with ❤️ by 
     <a
+      className="c2"
       href="http://github.com/gerroo"
     >
       @gerroo
@@ -454,232 +7059,157 @@ exports[`Storyshots Footer Default 1`] = `
 </section>
 `;
 
-exports[`Storyshots LoginForm Default 1`] = `
+exports[`Storyshots Sections / Login Form Default 1`] = `
+.c1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c9 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c4 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c5 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c5:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
   padding: 1rem 1.5rem;
-  border: 1px solid #101010;
   border-radius: .5rem;
   width: 100%;
-}
-
-.c3 p {
-  text-align: center;
-  -webkit-flex: 1 0;
-  -ms-flex: 1 0;
-  flex: 1 0;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-}
-
-.c3:focus-visible {
-  border-width: 2px;
-  outline: none;
-}
-
-.c4 {
-  cursor: pointer;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  gap: 2rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  gap: 1rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c5 button {
-  border: none;
-  padding: .5rem;
-  background: transparent;
-  cursor: pointer;
-}
-
-.c5 button:focus-visible {
-  outline: none;
-  font-weight: bold;
-}
-
-.c2 {
-  border-radius: 0;
-  padding: .5rem;
   border: 1px solid #101010;
 }
 
-.c2:focus-visible {
-  border-width: 2px;
+.c7:focus-visible {
   outline: none;
 }
 
-<div
-  className="c0"
->
-  <h1>
-    login
-  </h1>
-  <div
-    className="c1"
-  >
-    <input
-      className="c2"
-      onChange={[Function]}
-      placeholder="email"
-      value=""
-    />
-    <input
-      className="c2"
-      onChange={[Function]}
-      placeholder="password"
-      type="password"
-      value=""
-    />
-  </div>
-  <button
-    className="c3 c4"
-    onClick={[Function]}
-  >
-    <p>
-      login
-    </p>
-  </button>
-  <button
-    className="c3 c4"
-    onClick={[Function]}
-  >
-    <img
-      alt=""
-      src="google_logo.svg"
-    />
-     
-    <p>
-      login with google
-    </p>
-     
-    <img
-      alt=""
-      src="google_logo.svg"
-    />
-  </button>
-  <div
-    className="c5"
-  >
-    <button
-      className="underline"
-    >
-      sign up instead
-    </button>
-    <button
-      className="underline"
-      onClick={[Function]}
-    >
-      forgot password
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots LoginForm With Container 1`] = `
-.c4 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 1rem 1.5rem;
-  border: 1px solid #101010;
   border-radius: .5rem;
   width: 100%;
+  border: 1px solid #101010;
 }
 
-.c4 p {
-  text-align: center;
-  -webkit-flex: 1 0;
-  -ms-flex: 1 0;
-  flex: 1 0;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-}
-
-.c4:focus-visible {
-  border-width: 2px;
+.c10:focus-visible {
   outline: none;
 }
 
-.c5 {
+.c8 {
   cursor: pointer;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  gap: 2rem;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  gap: 1rem;
+.c8:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
 }
 
 .c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c6 > * {
+  width: 100%;
+}
+
+.c12 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c12:hover,
+.c12:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -690,69 +7220,76 @@ exports[`Storyshots LoginForm With Container 1`] = `
   justify-content: space-between;
 }
 
-.c6 button {
-  border: none;
-  padding: .5rem;
-  background: transparent;
-  cursor: pointer;
-}
-
-.c6 button:focus-visible {
-  outline: none;
-  font-weight: bold;
-}
-
-.c3 {
-  border-radius: 0;
-  padding: .5rem;
-  border: 1px solid #101010;
-}
-
-.c3:focus-visible {
-  border-width: 2px;
-  outline: none;
-}
-
-.c0 {
-  max-width: 300px;
-}
-
-<div
+<section
   className="c0"
 >
-  <div
+  <h1
     className="c1"
   >
-    <h1>
-      login
-    </h1>
+    login
+  </h1>
+  <div
+    className="c2"
+  >
     <div
-      className="c2"
+      className="c3"
     >
+      <p
+        className="c4"
+      >
+        email
+      </p>
       <input
-        className="c3"
+        autoComplete="email"
+        className="c5"
         onChange={[Function]}
         placeholder="email"
         value=""
       />
+      <p
+        className="c4"
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        password
+      </p>
       <input
-        className="c3"
+        autoComplete="password"
+        className="c5"
         onChange={[Function]}
         placeholder="password"
         type="password"
         value=""
       />
+      <p
+        className="c4"
+      />
     </div>
+  </div>
+  <section
+    className="c6 "
+  >
     <button
-      className="c4 c5"
+      className="c7 c8"
       onClick={[Function]}
     >
-      <p>
+      <p
+        className="c9"
+      >
         login
       </p>
     </button>
+  </section>
+  <section
+    className="c6 "
+  >
     <button
-      className="c4 c5"
+      className="c10 c8"
       onClick={[Function]}
     >
       <img
@@ -760,7 +7297,9 @@ exports[`Storyshots LoginForm With Container 1`] = `
         src="google_logo.svg"
       />
        
-      <p>
+      <p
+        className="c9"
+      >
         login with google
       </p>
        
@@ -769,32 +7308,369 @@ exports[`Storyshots LoginForm With Container 1`] = `
         src="google_logo.svg"
       />
     </button>
-    <div
-      className="c6"
+  </section>
+  <div
+    className="c11"
+  >
+    <button
+      className="c12"
+      onClick={[Function]}
     >
-      <button
-        className="underline"
+      <p
+        className="c9"
       >
         sign up instead
-      </button>
-      <button
-        className="underline"
-        onClick={[Function]}
+      </p>
+    </button>
+    <button
+      className="c12"
+      onClick={[Function]}
+    >
+      <p
+        className="c9"
       >
         forgot password
-      </button>
-    </div>
+      </p>
+    </button>
   </div>
-</div>
+  
+</section>
 `;
 
-exports[`Storyshots Navbar Default 1`] = `
-.c1 {
+exports[`Storyshots Sections / Login Form Mobile 1`] = `
+.c2 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c10 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c5 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c6 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c8:focus-visible {
+  outline: none;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c11:focus-visible {
+  outline: none;
+}
+
+.c9 {
+  cursor: pointer;
+}
+
+.c9:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c7 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
   padding: .5rem;
 }
 
-.c1:hover {
+.c13 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c13:hover,
+.c13:focus-visible {
   cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      login
+    </h1>
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          email
+        </p>
+        <input
+          autoComplete="email"
+          className="c6"
+          onChange={[Function]}
+          placeholder="email"
+          value=""
+        />
+        <p
+          className="c5"
+        />
+      </div>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          password
+        </p>
+        <input
+          autoComplete="password"
+          className="c6"
+          onChange={[Function]}
+          placeholder="password"
+          type="password"
+          value=""
+        />
+        <p
+          className="c5"
+        />
+      </div>
+    </div>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          login
+        </p>
+      </button>
+    </section>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c11 c9"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+         
+        <p
+          className="c10"
+        >
+          login with google
+        </p>
+         
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+      </button>
+    </section>
+    <div
+      className="c12"
+    >
+      <button
+        className="c13"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          sign up instead
+        </p>
+      </button>
+      <button
+        className="c13"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          forgot password
+        </p>
+      </button>
+    </div>
+    
+  </section>
+</div>
+`;
+
+exports[`Storyshots Sections / Navbar Default 1`] = `
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3:hover {
+  cursor: pointer;
+}
+
+.c3,
+.c3 img {
+  background-color: transparent;
+}
+
+.c1 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c1:hover,
+.c1:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
 }
 
 .c0 {
@@ -802,15 +7678,14 @@ exports[`Storyshots Navbar Default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  padding: 2.5rem 1rem;
-  max-width: 1000px;
+  padding: 2.5rem 2.5rem;
+  padding-top: 4rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -821,52 +7696,150 @@ exports[`Storyshots Navbar Default 1`] = `
     className="c1"
     onClick={[Function]}
   >
-    practice.design
+    <p
+      className="c2"
+    >
+      practice.design
+    </p>
   </button>
   <button
-    className="c1"
+    className="c3"
     onClick={[Function]}
   >
     <img
-      alt="hamburger menu icon"
+      alt="some icon"
       src="hamburger_menu_icon.svg"
     />
   </button>
 </section>
 `;
 
-exports[`Storyshots Navbar Option Default 1`] = `
-.c0 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  padding: .75rem;
+exports[`Storyshots Sections / Navbar Mobile 1`] = `
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.c0:hover {
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4:hover {
   cursor: pointer;
 }
 
-<button
+.c4,
+.c4 img {
+  background-color: transparent;
+}
+
+.c2 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2.5rem 2.5rem;
+  padding-top: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+<div
   className="c0"
 >
-  home
-</button>
+  <section
+    className="c1"
+  >
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <p
+        className="c3"
+      >
+        practice.design
+      </p>
+    </button>
+    <button
+      className="c4"
+      onClick={[Function]}
+    >
+      <img
+        alt="some icon"
+        src="hamburger_menu_icon.svg"
+      />
+    </button>
+  </section>
+</div>
 `;
 
-exports[`Storyshots Navbar Overlay Default 1`] = `
+exports[`Storyshots Sections / Signup Form Default 1`] = `
 .c1 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  padding: .75rem;
+  font-size: 64px;
+  line-height: 80px;
 }
 
-.c1:hover {
-  cursor: pointer;
+.c9 {
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.c0 {
-  position: absolute;
-  padding: 2.5rem .5rem;
+.c4 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c5 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c5:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -874,122 +7847,1205 @@ exports[`Storyshots Navbar Overlay Default 1`] = `
   -webkit-flex-flow: column;
   -ms-flex-flow: column;
   flex-flow: column;
+  gap: .25rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c7:focus-visible {
+  outline: none;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c10:focus-visible {
+  outline: none;
+}
+
+.c8 {
+  cursor: pointer;
+}
+
+.c8:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c6 > * {
+  width: 100%;
+}
+
+.c11 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c11:hover,
+.c11:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   gap: .5rem;
-  top: 4rem;
+  width: 100%;
 }
 
-<nav
+<section
   className="c0"
 >
-  <button
+  <h1
     className="c1"
+  >
+    sign up
+  </h1>
+  <section
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        username
+      </p>
+      <input
+        autoComplete="username"
+        className="c5"
+        onChange={[Function]}
+        placeholder="username"
+        value=""
+      />
+      <p
+        className="c4"
+      >
+        
+      </p>
+    </div>
+    <div
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        email
+      </p>
+      <input
+        autoComplete="email"
+        className="c5"
+        onChange={[Function]}
+        placeholder="email"
+        value=""
+      />
+      <p
+        className="c4"
+      >
+        
+      </p>
+    </div>
+    <div
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        pass
+      </p>
+      <input
+        autoComplete="pass"
+        className="c5"
+        onChange={[Function]}
+        placeholder="pass"
+        type="password"
+        value=""
+      />
+      <p
+        className="c4"
+      >
+        
+      </p>
+    </div>
+  </section>
+  <section
+    className="c6 "
+  >
+    <button
+      className="c7 c8"
+      onClick={[Function]}
+    >
+      <p
+        className="c9"
+      >
+        create account
+      </p>
+    </button>
+    
+  </section>
+  <section
+    className="c6 "
+  >
+    <button
+      className="c10 c8"
+      onClick={[Function]}
+    >
+      <img
+        alt=""
+        src="google_logo.svg"
+      />
+       
+      <p
+        className="c9"
+      >
+        login with google
+      </p>
+       
+      <img
+        alt=""
+        src="google_logo.svg"
+      />
+    </button>
+    
+  </section>
+  <button
+    className="c11"
     onClick={[Function]}
   >
-    hello
+    <p
+      className="c9"
+    >
+      I already have an account
+    </p>
   </button>
-  <button
-    className="c1"
-    onClick={[Function]}
-  >
-    second option
-  </button>
-</nav>
+  
+</section>
 `;
 
-exports[`Storyshots SolutionCard Alternate 1`] = `
+exports[`Storyshots Sections / Signup Form Mobile 1`] = `
+.c2 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.c10 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c5 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c6 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c8:focus-visible {
+  outline: none;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c11:focus-visible {
+  outline: none;
+}
+
+.c9 {
+  cursor: pointer;
+}
+
+.c9:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c7 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c12 {
+  display: inline-block;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.c12:hover,
+.c12:focus-visible {
+  cursor: pointer;
+  -webkit-text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .5rem;
+  width: 100%;
+}
+
 <div
-  className=""
+  className="c0"
 >
-  <img
-    alt="figma thumbnail"
-  />
-  <div>
-    <p />
-    <p>
-      solution by 
+  <section
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      sign up
+    </h1>
+    <section
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          username
+        </p>
+        <input
+          autoComplete="username"
+          className="c6"
+          onChange={[Function]}
+          placeholder="username"
+          value=""
+        />
+        <p
+          className="c5"
+        >
+          
+        </p>
+      </div>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          email
+        </p>
+        <input
+          autoComplete="email"
+          className="c6"
+          onChange={[Function]}
+          placeholder="email"
+          value=""
+        />
+        <p
+          className="c5"
+        >
+          
+        </p>
+      </div>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          pass
+        </p>
+        <input
+          autoComplete="pass"
+          className="c6"
+          onChange={[Function]}
+          placeholder="pass"
+          type="password"
+          value=""
+        />
+        <p
+          className="c5"
+        >
+          
+        </p>
+      </div>
+    </section>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c8 c9"
+        onClick={[Function]}
+      >
+        <p
+          className="c10"
+        >
+          create account
+        </p>
+      </button>
+      
+    </section>
+    <section
+      className="c7 "
+    >
+      <button
+        className="c11 c9"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+         
+        <p
+          className="c10"
+        >
+          login with google
+        </p>
+         
+        <img
+          alt=""
+          src="google_logo.svg"
+        />
+      </button>
+      
+    </section>
+    <button
+      className="c12"
+      onClick={[Function]}
+    >
+      <p
+        className="c10"
+      >
+        I already have an account
+      </p>
+    </button>
+    
+  </section>
+</div>
+`;
+
+exports[`Storyshots Sections / Submit Solution Form Default 1`] = `
+.c7 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c2 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c3 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c3:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c5:focus-visible {
+  outline: none;
+}
+
+.c6 {
+  cursor: pointer;
+}
+
+.c6:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c4 > * {
+  width: 100%;
+}
+
+.c0 {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <p
+      className="c2"
+    >
+      figma community url
     </p>
+    <input
+      autoComplete="figma community url"
+      className="c3"
+      onChange={[Function]}
+      placeholder="figma community url"
+      value=""
+    />
+    <p
+      className="c2"
+    />
+  </div>
+  <section
+    className="c4 "
+  >
+    <button
+      className="c5 c6"
+      onClick={[Function]}
+    >
+      <p
+        className="c7"
+      >
+        solve
+      </p>
+    </button>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Sections / Submit Solution Form Mobile 1`] = `
+.c8 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c3 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c4 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c4:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  outline: none;
+}
+
+.c7 {
+  cursor: pointer;
+}
+
+.c7:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c5 > * {
+  width: 100%;
+}
+
+.c0 {
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
+}
+
+.c1 {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <p
+        className="c3"
+      >
+        figma community url
+      </p>
+      <input
+        autoComplete="figma community url"
+        className="c4"
+        onChange={[Function]}
+        placeholder="figma community url"
+        value=""
+      />
+      <p
+        className="c3"
+      />
+    </div>
+    <section
+      className="c5 "
+    >
+      <button
+        className="c6 c7"
+        onClick={[Function]}
+      >
+        <p
+          className="c8"
+        >
+          solve
+        </p>
+      </button>
+    </section>
   </div>
 </div>
 `;
 
-exports[`Storyshots SolutionCard Default 1`] = `
-<div
-  className=""
-/>
-`;
+exports[`Storyshots Sections / Username Modal Default 1`] = `
+.c2 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
 
-exports[`Storyshots SolutionCard Some State 1`] = `
-<div
-  className=""
-/>
-`;
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
+}
 
-exports[`Storyshots SolutionCard With Button 1`] = `
-<div
-  className=""
+.c5 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c0 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border: 1px solid #101010;
+  border-radius: .25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 384px;
+  min-width: 240px;
+  background-color: #F0F0F0;
+  width: 50%;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c1 > * {
+  width: 100%;
+}
+
+.c6 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c6:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c8:focus-visible {
+  outline: none;
+}
+
+.c9 {
+  cursor: pointer;
+}
+
+.c9:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c7 > * {
+  width: 100%;
+}
+
+<section
+  className="c0"
 >
-  <img
-    alt="figma thumbnail"
-  />
-  <div>
-    <p />
-    <p>
-      solution by 
+  <section
+    className="c1 "
+  >
+    <h3
+      className="c2"
+    >
+      now pick a username
+    </h3>
+    <p
+      className="c3"
+    >
+      You can always change it later in settings.
     </p>
+  </section>
+  <div
+    className="c4"
+  >
+    <p
+      className="c5"
+    >
+      username
+    </p>
+    <input
+      autoComplete="username"
+      className="c6"
+      onChange={[Function]}
+      placeholder="username"
+      value=""
+    />
+    <p
+      className="c5"
+    />
   </div>
-</div>
+  <section
+    className="c7 "
+  >
+    <button
+      className="c8 c9"
+      onClick={[Function]}
+    >
+      <p
+        className="c3"
+      >
+        call me 
+      </p>
+    </button>
+    
+  </section>
+  
+</section>
 `;
 
-exports[`Storyshots Toast Default 1`] = `
+exports[`Storyshots Sections / Username Modal Mobile 1`] = `
+.c3 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.c4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c6 {
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.c1 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border: 1px solid #101010;
+  border-radius: .25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 384px;
+  min-width: 240px;
+  background-color: #F0F0F0;
+  width: 50%;
+}
+
+.c2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c2 > * {
+  width: 100%;
+}
+
+.c7 {
+  padding: .5rem;
+  border: 1px solid #101010;
+}
+
+.c7:focus-visible {
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: .25rem;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  width: 100%;
+  border: 1px solid #101010;
+}
+
+.c9:focus-visible {
+  outline: none;
+}
+
+.c10 {
+  cursor: pointer;
+}
+
+.c10:focus-visible {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #101010;
+  outline: none;
+}
+
+.c8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+
+.c8 > * {
+  width: 100%;
+}
+
 .c0 {
-  position: absolute;
-  bottom: 1rem;
-  left: 50vw;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  padding: .5rem 1rem;
-  background-color: #101010;
-  color: #F0F0F0;
-  border-radius: 2rem;
-  -webkit-transition: -webkit-transform .3s;
-  -webkit-transition: transform .3s;
-  transition: transform .3s;
+  max-width: 316px;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  padding: .5rem;
 }
 
 <div
   className="c0"
-  onClick={[Function]}
 >
-  🎉 Starting is 50% of the work!
-</div>
-`;
-
-exports[`Storyshots Toast Display 1`] = `
-.c0 {
-  position: absolute;
-  bottom: 1rem;
-  left: 50vw;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  padding: .5rem 1rem;
-  background-color: #101010;
-  color: #F0F0F0;
-  border-radius: 2rem;
-  -webkit-transition: -webkit-transform .3s;
-  -webkit-transition: transform .3s;
-  transition: transform .3s;
-}
-
-<div
-  className="c0"
-  onClick={[Function]}
->
-  🎉 Starting is 50% of the work!
+  <section
+    className="c1"
+  >
+    <section
+      className="c2 "
+    >
+      <h3
+        className="c3"
+      >
+        now pick a username
+      </h3>
+      <p
+        className="c4"
+      >
+        You can always change it later in settings.
+      </p>
+    </section>
+    <div
+      className="c5"
+    >
+      <p
+        className="c6"
+      >
+        username
+      </p>
+      <input
+        autoComplete="username"
+        className="c7"
+        onChange={[Function]}
+        placeholder="username"
+        value=""
+      />
+      <p
+        className="c6"
+      />
+    </div>
+    <section
+      className="c8 "
+    >
+      <button
+        className="c9 c10"
+        onClick={[Function]}
+      >
+        <p
+          className="c4"
+        >
+          call me 
+        </p>
+      </button>
+      
+    </section>
+    
+  </section>
 </div>
 `;

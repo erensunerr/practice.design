@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 import {useParams} from 'react-router-dom';
@@ -12,15 +12,35 @@ import {getChallengeById} from '../../api/challenge';
  */
 function SubmitSolution({...oP}) {
   const {challengeId} = useParams();
-  const challenge = getChallengeById(challengeId);
+  const [challenge, setChallenge] = useState(null);
+  useEffect(
+      async () => {
+        try {
+          setChallenge(await getChallengeById(challengeId));
+        } catch {
+          console.log(
+              `challenge you are trying to submit 
+               a solution for is not found :(((`,
+          );
+        }
+      }, [challengeId],
+  );
+
   return (
     <section {...oP}>
-      <Typography.Title>
+      {
+      challenge ?
+      <>
+        <Typography.Title>
         Submit a Solution for {challenge.title}
-      </Typography.Title>
-      <SubmitSolutionForm
-        challenge={challenge}
-      />
+        </Typography.Title>
+        <SubmitSolutionForm
+          challenge={challenge}
+        />
+      </> :
+      <Typography.BodyText>challenge is not found :((</Typography.BodyText>
+      }
+
     </section>
   );
 }

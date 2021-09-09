@@ -29,7 +29,7 @@ export default function Challenge(
  */
 export async function getChallengeById(id) {
   if (!id) {
-    throw new Error('you need to pass an id');
+    throw new Error('you need to pass a challenge id');
   }
   const db = getFirestore();
 

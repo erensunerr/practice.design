@@ -57,9 +57,8 @@ export async function updateSolutionData(newSolutionData) {
  * gets solutions by user id
  */
 export async function getSolutionById(id) {
-  console.log('IN GSBID ', id);
   if (!id) {
-    throw new Error('you need to pass an id');
+    throw new Error('you need to pass a solution id');
   }
   const db = getFirestore();
 
