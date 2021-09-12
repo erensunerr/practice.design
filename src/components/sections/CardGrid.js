@@ -27,7 +27,7 @@ CardGrid.propTypes = {
   children: propTypes.node,
 };
 
-const StyledCardGrid = styled(CardGrid)`
+CardGrid = styled(CardGrid)`
   display: flex;
   flex-flow: wrap;
   ${Card} {
@@ -36,4 +36,4 @@ const StyledCardGrid = styled(CardGrid)`
   gap: 2rem;
 `;
 
-export default StyledCardGrid;
+export default CardGrid;

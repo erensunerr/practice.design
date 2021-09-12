@@ -9,7 +9,8 @@ import CategoriesSelector from '../CategoriesSelector';
 import Option from '../../atoms/Option';
 import FigmaImage from '../../atoms/FigmaImage';
 import {useHistory} from 'react-router-dom';
-
+import {updateUserData} from '../../../api/user';
+import useUser from '../../useUser';
 
 const CardOptionStyles = styled(Option)`
   text-align: right;
@@ -21,8 +22,13 @@ const ChallengeCardStyles = styled(Card)`
 /**
  * Specialized Card for a challenge.
  */
-function ChallengeCard({challenge, ...oP}) {
+function ChallengeCard({challenge, sendToSolve, ...oP}) {
   const history = useHistory();
+  const {user} = useUser();
+  const isAccepted = user?.activeChallenges.find(
+      (c) => c.id === challenge.id,
+  ) != null;
+
   return (
     <ChallengeCardStyles {...oP}>
       <Typography.BodyText>{challenge.title}</Typography.BodyText>
@@ -34,17 +40,27 @@ function ChallengeCard({challenge, ...oP}) {
           }
         }
       />
-      <TextButton text='accept the challenge' onClick={
-        () => {
-          history.push(`/challenge/${challenge.id}`);
-        }
-      }/>
+      <TextButton
+        text={ isAccepted ? 'go to figma' : 'accept the challenge'}
+        onClick={
+          () => {
+            if (!isAccepted) {
+              console.log('accepted challenge', user);
+              user.activeChallenges.push(challenge);
+              updateUserData(user);
+              history.push(`/my_challenges`);
+            } else {
+              history.push(challenge.figmaUrl);
+            }
+          }
+        }/>
     </ChallengeCardStyles>
   );
 }
 
 ChallengeCard.propTypes = {
   challenge: propTypes.object,
+  sendToSolve: propTypes.bool,
 };
 
 export default ChallengeCard;

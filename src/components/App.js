@@ -18,6 +18,7 @@ import SettingsPage from './pages/SettingsPage';
 import ProfilePage from './pages/ProfilePage';
 import MyChallenges from './pages/MyChallenges';
 import CreateChallenge from './pages/CreateChallenge';
+import FindAChallenge from './pages/FindAChallenge';
 
 // TODO: add theme variable for touchscreen.
 
@@ -64,6 +65,9 @@ function App() {
                 </Route>
                 <Route path='/create' exact>
                   <CreateChallenge />
+                </Route>
+                <Route path='/find' exact>
+                  <FindAChallenge />
                 </Route>
               </Switch>
             </ActiveAreaStyles>

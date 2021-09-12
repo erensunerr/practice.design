@@ -41,6 +41,12 @@ const signedInNavbarOptions = (history, user) => [
     },
   },
   {
+    text: 'find a challenge',
+    onClick: () => {
+      history.push('/find');
+    },
+  },
+  {
     text: 'my challenges',
     onClick: () => {
       history.push('/my_challenges');

@@ -1,5 +1,15 @@
 import
-{doc, addDoc, getDoc, getFirestore, Timestamp, query, orderBy, collection}
+{
+  doc,
+  addDoc,
+  getDoc,
+  getDocs,
+  getFirestore,
+  Timestamp,
+  query,
+  orderBy,
+  collection,
+}
   from 'firebase/firestore';
 
 
@@ -83,7 +93,6 @@ export async function updateChallengeData(newChallengeData) {
  */
 export async function getChallenges() {
   const db = getFirestore();
-
   const q = query(
       collection(db, 'challenges'),
       orderBy('lastUpdated'),
@@ -93,12 +102,15 @@ export async function getChallenges() {
   ).catch(
       (e) => console.log('get doc error: ', e),
   );
-  console.log(d.data());
-  return d.data();
-}
-/**
- * gets challenges by user id
- */
-export async function getChallengesByUid(uid) {
 
+  // turn firebase documents (💩) into actual challenges (⭐️)
+  const challenges = d.docs.map(
+      (c) => (
+        new Challenge({id: c.id, ...c.data()})
+      ),
+  );
+  console.log(
+      challenges,
+  );
+  return challenges;
 }
